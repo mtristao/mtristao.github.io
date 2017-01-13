@@ -1,0 +1,26 @@
+* {
+	font-family: 'Lora', serif;
+	border: 0;
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5,
+h1 a, h2 a, h3 a, h4 a, h5 a {
+	font-family: 'Playfair Display', serif;
+}
+
+.logo-readium {
+	font-family: 'Playfair Display', serif;
+	color: #FFF;
+	text-decoration: none;
+    font-size: 45px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.content article .post-title {
+	margin-bottom: 15px;
+}
