@@ -1,5 +1,19 @@
+@font-face {
+    font-family: 'NeueHaasGrotesk';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NeueHaasGrotesk'), url('../fonts/NHaasGroteskTXPro-55Rg.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NeueHaasGroteskBold'), url('../fonts/NHaasGroteskTXPro-75Bd.woff') format('woff');
+}
+
 * {
-	font-family: 'Lora', serif;
+	font-family: 'NeueHaasGrotesk', serif;
 	border: 0;
 	outline: none;
 	margin: 0;
