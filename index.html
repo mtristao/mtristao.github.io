@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Marcio Tristão - Digital Product Manager</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
+        /* General Reset */
+        body, h1, h2, h3, p, ul {
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        a:hover {
+            color: #00509e;
         }
         header {
-            background: #1a202c;
+            background: #0066cc;
             color: #fff;
-            text-align: center;
             padding: 2rem 1rem;
+            text-align: center;
         }
         header .blog-title {
             font-size: 2.5rem;
@@ -37,106 +39,162 @@
         }
         header .blog-description {
             font-size: 1.2rem;
-            margin: 0.5rem 0;
+            margin: 0.3rem 0;
         }
-        .content {
-            padding: 2rem 1rem;
-            max-width: 800px;
-            margin: 0 auto;
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .section-title {
-            font-size: 2rem;
-            color: #1a202c;
-            border-bottom: 3px solid #f4a261;
+        .post-header h2 {
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            padding-bottom: 0.3rem;
-        }
-        .post-title {
-            font-size: 1.5rem;
-            color: #1a202c;
-            margin: 1rem 0 0.5rem;
+            color: #0066cc;
         }
         .post-excerpt {
-            line-height: 1.6;
-            margin-bottom: 2rem;
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #555;
         }
-        .custom-links a {
-            color: #f4a261;
-            text-decoration: none;
+        .post-excerpt p, .post-excerpt ul {
+            margin-bottom: 1rem;
+        }
+        .icon-linkedin {
             font-size: 1.5rem;
-            margin: 0 0.5rem;
+            margin-right: 0.5rem;
         }
         footer {
-            text-align: center;
-            padding: 1rem;
-            background: #1a202c;
+            background: #333;
             color: #fff;
+            text-align: center;
+            padding: 1rem 0;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <h1 class="blog-title">Marcio Tristão</h1>
+        <h2 class="blog-description">Product Manager & Digital Strategist</h2>
+        <h2 class="blog-description">
+            <a href="mailto:mtristao@gmail.com">mtristao@gmail.com</a>
+        </h2>
+        <div class="custom-links">
+            <a class="icon-linkedin" href="https://www.linkedin.com/in/marciotristao" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </header>
 
-<header>
-    <h1 class="blog-title">Marcio Tristão</h1>
-    <p class="blog-description">Digital Product Manager & Strategist</p>
-    <p class="blog-description"><a href="mailto:mtristao@gmail.com" style="color: #f4a261;">mtristao@gmail.com</a></p>
-    <div class="custom-links">
-        <a href="https://www.linkedin.com/in/marciotristao" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
+    <!-- Main Content -->
+    <div class="container">
+        <section>
+            <header class="post-header">
+                <h2>Hello!</h2>
+            </header>
+            <div class="post-excerpt">
+                <p>Having gathered over 20 years of experience, I can proudly say I have contributed to a wide range of projects in the digital market.</p>
+                <ul>
+                    <li>Experienced in both technical and managerial positions in multidisciplinary teams with agile methodology.</li>
+                    <li>Robust background in UX/UI/CX, linking strategic goals to project execution.</li>
+                    <li>Refining scalable solutions for reliable products reaching millions of users weekly.</li>
+                    <li>Advocating for constant software trials, A/B testing, and data-driven decision-making.</li>
+                </ul>
+                <h3>What Drives Me to Change</h3>
+                <p>I crave to learn, evolve, and innovate in different segments, collaborating with talented people from diverse cultures.</p>
+            </div>
+        </section>
     </div>
-</header>
 
-<main class="content">
-    <section>
-        <h2 class="section-title">Introduction</h2>
-        <p>
-            With over 20 years in the digital market, I am passionate about innovation, strategy, and team empowerment.
-            My expertise spans UX/UI, agile methodologies, and developing high-performing digital products.
-        </p>
-    </section>
+    <div class="container">
+        <section>
+            <header class="post-header">
+                <h2>PEOPLE</h2>
+            </header>
+            <div class="post-excerpt">
+                <ul>
+                    <li>Open communication channels</li>
+                    <li>Honesty and transparency</li>
+                    <li>Empathetic listening</li>
+                    <li>Recognizing team and individual achievements</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2 class="section-title">Professional Philosophy</h2>
-        <article>
-            <h3 class="post-title">PEOPLE</h3>
-            <p class="post-excerpt">Empathy, honesty, and recognizing achievements form the backbone of my leadership approach.</p>
-        </article>
-        <article>
-            <h3 class="post-title">PROCESS</h3>
-            <p class="post-excerpt">Process is critical, but delivering results and creating impact is the ultimate goal.</p>
-        </article>
-    </section>
+    <div class="container">
+        <section>
+            <header class="post-header">
+                <h2>PROCESS</h2>
+            </header>
+            <div class="post-excerpt">
+                <p>Process is key, but the end goal is the delivery of results.</p>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2 class="section-title">Core Skills</h2>
-        <p class="post-excerpt">
-            Digital Project Management, UX/UI, Agile Methodologies, Product Strategy, and Data-Driven Decision Making. My expertise also includes Sports, Entertainment, and News-related products.
-        </p>
-    </section>
+    <div class="container">
+        <section>
+            <header class="post-header">
+                <h2>SKILLS</h2>
+            </header>
+            <div class="post-excerpt">
+                <ul>
+                    <li>Digital Strategy & Project Management</li>
+                    <li>User Experience & Content Strategy</li>
+                    <li>Prototyping & Mobile App Development</li>
+                    <li>Fantasy Games, Entertainment, News, and Sports</li>
+                    <li>Agile Methodologies</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2 class="section-title">Projects</h2>
-        <article>
-            <h3 class="post-title">GShow & Big Brother Brasil</h3>
-            <p class="post-excerpt">
-                Product Development Manager (2021–2023): Spearheaded a multidisciplinary team delivering digital platforms like GShow and Big Brother Brasil,
-                achieving over 30 million monthly users.
-            </p>
-        </article>
-        <article>
-            <h3 class="post-title">Cartola Fantasy Game</h3>
-            <p class="post-excerpt">
-                Transitioned Cartola into a successful paid model while retaining its competitive integrity.
-                Achievements include 1M+ assembled teams and 49M+ screen views.
-            </p>
-        </article>
-    </section>
-</main>
+    <div class="container">
+        <section>
+            <header class="post-header">
+                <h2>PROJECTS+</h2>
+            </header>
+            <div class="post-excerpt">
+                <p><strong>Gshow, Big Brother Brasil, and Reality Shows</strong></p>
+                <p>Product Development Manager | Jan 2021 – Apr 2023</p>
+                <ul>
+                    <li>Over 20 million users monthly for Gshow.</li>
+                    <li>Developed "Big Game BBB" Fantasy Game: 300K users, 49MM screenviews.</li>
+                    <li>Managed teams delivering solutions for corporate sites.</li>
+                </ul>
+                <!-- Repeat for other projects -->
+            </div>
+        </section>
+    </div>
 
-<footer>
-    <p>© 2024 Marcio Tristão. All rights reserved.</p>
-</footer>
+    <div class="container">
+        <section>
+            <header class="post-header">
+                <h2>EDUCATION</h2>
+            </header>
+            <div class="post-excerpt">
+                <p><strong>Executive</strong></p>
+                <ul>
+                    <li>Program for Leadership Development, HBS (2022/23)</li>
+                    <li>Strategic Marketing Management, HBS (2017)</li>
+                    <li>Innovative Technology Leader, Stanford GSB (2017)</li>
+                </ul>
+                <p><strong>Academic</strong></p>
+                <ul>
+                    <li>Ph.D. in Design, UERJ/ESDI (not completed)</li>
+                    <li>MBA Executive, COPPEAD (2012)</li>
+                    <li>Master in Design, PUC-RJ (2008)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
+    <footer>
+        <p>&copy; 2024 Marcio Tristão. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+
