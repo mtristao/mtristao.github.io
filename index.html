@@ -1,117 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="canonical" href="//">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Marcio Tristão - Digital Product Manager</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Marcio Tristão</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #1a202c;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        header .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header .blog-description {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        .content {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #1a202c;
+            border-bottom: 3px solid #f4a261;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+        }
+        .post-title {
+            font-size: 1.5rem;
+            color: #1a202c;
+            margin: 1rem 0 0.5rem;
+        }
+        .post-excerpt {
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .custom-links a {
+            color: #f4a261;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1a202c;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <a href="/" class="logo-readium">T</a>
-    </header>
 
-    <!-- Content -->
-    <div class="page-content">
-        <div class="wrapper">
-            <!-- Blog Header -->
-            <header class="blog-header">
-                <h1 class="blog-title">Marcio Tristão</h1>
-                <h2 class="blog-description">Product Manager & Digital Strategist</h2>
-                <h2 class="blog-description"><a href="mailto:mtristao@gmail.com">mtristao@gmail.com</a></h2>
-                <div class="custom-links">
-                    <a class="icon-linkedin" href="https://www.linkedin.com/in/marciotristao?trk=nav_responsive_tab_profile">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </div>
-            </header>
-
-            <!-- Main Content -->
-            <main role="main">
-                <!-- Featured Articles -->
-                <div class="container featured">
-                    <!-- Hello Section -->
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-                        <header class="post-header">
-                            <h2 class="post-title" itemprop="name">Hello!</h2>
-                        </header>
-                        <section class="post-excerpt" itemprop="description">
-                            <h3>Having gathered over 20 years of experience...</h3>
-                            <p>I make the case that teams should run software trials...</p>
-                        </section>
-                    </article>
-                </div>
-
-                <!-- People Section -->
-                <div class="container featured">
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-                        <header class="post-header">
-                            <h2 class="post-title" itemprop="name">PEOPLE</h2>
-                        </header>
-                        <section class="post-excerpt" itemprop="description">
-                            <p>To be available and keep communication channels always open...</p>
-                        </section>
-                    </article>
-                </div>
-
-                <!-- Process Section -->
-                <div class="container featured">
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-                        <header class="post-header">
-                            <h2 class="post-title" itemprop="name">PROCESS</h2>
-                        </header>
-                        <section class="post-excerpt" itemprop="description">
-                            <p>Process is key, but the end goal is the delivery of results.</p>
-                        </section>
-                    </article>
-                </div>
-
-                <!-- Skills Section -->
-                <div class="container featured">
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-                        <header class="post-header">
-                            <h2 class="post-title" itemprop="name">SKILLS</h2>
-                        </header>
-                        <section class="post-excerpt" itemprop="description">
-                            <p>Discover and develop an intersection of business requirements and user needs...</p>
-                        </section>
-                    </article>
-                </div>
-
-                <!-- Projects+ Section -->
-                <div class="container featured">
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-                        <header class="post-header">
-                            <h2 class="post-title" itemprop="name">PROJECTS+</h2>
-                        </header>
-                        <section class="post-excerpt" itemprop="description">
-                            <p><strong>Gshow...</strong></p>
-                        </section>
-                    </article>
-                </div>
-
-                <!-- Education Section -->
-                <div class="container featured">
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-                        <header class="post-header">
-                            <h2 class="post-title" itemprop="name">EDUCATION</h2>
-                        </header>
-                        <section class="post-excerpt" itemprop="description">
-                            <p><strong>Executive</strong>...</p>
-                        </section>
-                    </article>
-                </div>
-            </main>
-        </div>
+<header>
+    <h1 class="blog-title">Marcio Tristão</h1>
+    <p class="blog-description">Digital Product Manager & Strategist</p>
+    <p class="blog-description"><a href="mailto:mtristao@gmail.com" style="color: #f4a261;">mtristao@gmail.com</a></p>
+    <div class="custom-links">
+        <a href="https://www.linkedin.com/in/marciotristao" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
     </div>
+</header>
+
+<main class="content">
+    <section>
+        <h2 class="section-title">Introduction</h2>
+        <p>
+            With over 20 years in the digital market, I am passionate about innovation, strategy, and team empowerment.
+            My expertise spans UX/UI, agile methodologies, and developing high-performing digital products.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Professional Philosophy</h2>
+        <article>
+            <h3 class="post-title">PEOPLE</h3>
+            <p class="post-excerpt">Empathy, honesty, and recognizing achievements form the backbone of my leadership approach.</p>
+        </article>
+        <article>
+            <h3 class="post-title">PROCESS</h3>
+            <p class="post-excerpt">Process is critical, but delivering results and creating impact is the ultimate goal.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2 class="section-title">Core Skills</h2>
+        <p class="post-excerpt">
+            Digital Project Management, UX/UI, Agile Methodologies, Product Strategy, and Data-Driven Decision Making. My expertise also includes Sports, Entertainment, and News-related products.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <article>
+            <h3 class="post-title">GShow & Big Brother Brasil</h3>
+            <p class="post-excerpt">
+                Product Development Manager (2021–2023): Spearheaded a multidisciplinary team delivering digital platforms like GShow and Big Brother Brasil,
+                achieving over 30 million monthly users.
+            </p>
+        </article>
+        <article>
+            <h3 class="post-title">Cartola Fantasy Game</h3>
+            <p class="post-excerpt">
+                Transitioned Cartola into a successful paid model while retaining its competitive integrity.
+                Achievements include 1M+ assembled teams and 49M+ screen views.
+            </p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Marcio Tristão. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
