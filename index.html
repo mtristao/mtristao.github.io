@@ -144,6 +144,16 @@ h3 {
     letter-spacing: -.035em;
 }
 p { margin: 1rem 0; color: #333333; font-size: 1rem; line-height: 1.7; }
+.intro-columns {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 5vw, 5rem); align-items: start;
+}
+.intro-column { min-width: 0; }
+.intro-column + .intro-column {
+    border-left: 1px solid var(--color-gray); padding-left: clamp(1.5rem, 3vw, 3rem);
+}
+.intro-column > p:first-child { margin-top: 0; }
+.intro-column > p:last-child { margin-bottom: 0; }
 .highlight { margin: 2rem 0 .75rem; color: var(--color-red-text); font: 700 .78rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
 ul { margin: 1rem 0 2rem; padding-left: 1.25rem; }
 li { margin: .7rem 0; padding-left: .25rem; color: #333333; font-size: 1rem; line-height: 1.65; }
@@ -213,6 +223,8 @@ li strong { color: var(--color-ink); font-weight: 700; }
     .hero { min-height: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 1rem; padding: 5rem 0 4rem; }
     .page-title { font-size: clamp(3.7rem, 17vw, 7rem); }
     .professional-skills { grid-column: 1 / -1; margin-top: 2rem; }
+    .intro-columns { grid-template-columns: 1fr; row-gap: 2.5rem; }
+    .intro-column + .intro-column { border-left: 0; border-top: 1px solid var(--color-gray); padding: 2.5rem 0 0; }
     .welcome-message { grid-column: 1 / -1; margin-top: 2.5rem; }
     .contact-links { margin-top: 2rem; }
     section { padding: 3.5rem 0; }
@@ -280,6 +292,8 @@ li strong { color: var(--color-ink); font-weight: 700; }
 
     <section id="introduction">
         <h2>Introduction</h2>
+        <div class="intro-columns">
+            <div class="intro-column intro-column-en" lang="en">
         <p>🇺🇸 Executive with 25+ years of experience in Digital Product Management, UX, and Product Strategy. Skilled in leading multidisciplinary teams, delivering scalable and innovative digital products, and driving measurable business impact. Expertise in agile methodologies, MVPs, POCs, A/B testing, and data-driven decision-making. Strong communicator with the ability to articulate complex concepts to executives and stakeholders, ensuring alignment and success across projects.</p>
        
         <p class="highlight">Key Highlights:</p>
@@ -293,6 +307,8 @@ li strong { color: var(--color-ink); font-weight: 700; }
         
         <p class="highlight">What Drives Me:</p>
         <p>A relentless desire to learn, evolve, and innovate across industries, fueled by collaboration with talented professionals from diverse cultures. I thrive in environments that challenge me to exceed goals, deliver excellence, and create value at every step.</p>
+            </div>
+            <div class="intro-column intro-column-pt" lang="pt-BR">
         <p>🇧🇷 Executivo com mais de 25 anos de experiência em Digital Product Management, UX e Product Strategy. Experiência em liderar equipes multidisciplinares, entregar produtos digitais escaláveis e inovadores e gerar impacto de negócio mensurável. Especialista em metodologias ágeis, MVPs, POCs, A/B testing e data-driven decision-making. Excelente comunicador, com habilidade para articular conceitos complexos a executivos e stakeholders, garantindo alinhamento e sucesso em projetos.</p>        
         
         <p class="highlight">Destaques:</p>
@@ -306,6 +322,8 @@ li strong { color: var(--color-ink); font-weight: 700; }
 
         <p class="highlight">O que me motiva:</p>
         <p>Tenho uma energia incansável para aprender, evoluir e inovar. O que mais me inspira é colaborar com profissionais talentosos de diferentes culturas, enfrentando desafios que me motivam a superar metas, entregar excelência e gerar valor em cada etapa da jornada.</p>
+            </div>
+        </div>
     </section>
 
     <section id="experience">
