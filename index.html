@@ -185,15 +185,22 @@ li strong { color: var(--color-ink); font-weight: 700; }
 .experience-company-heading .job-title { margin: 0; }
 
 /* Education and event archive */
-.education-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; }
-.education-item {
-    display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline;
-    gap: .5rem 1rem; margin: 0; padding: 1.15rem 0;
-    border-bottom: 1px solid var(--color-gray);
+.education-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 920px;
 }
-.education-item p { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .5rem 1rem; margin: 0; }
+.education-item {
+    display: block; margin: 0; padding: 1.15rem 0 1.15rem 1rem;
+    border-bottom: 1px solid var(--color-gray);
+    border-left: 2px solid var(--color-red);
+}
+.education-item p {
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    justify-content: space-between; gap: .35rem 1.25rem; margin: 0;
+}
 .education-item strong { color: var(--color-ink); font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
-.education-meta { color: var(--color-muted); font: 400 .72rem/1.5 var(--font-mono); text-align: right; white-space: nowrap; }
+.education-meta { color: var(--color-red-text); font: 700 .72rem/1.5 var(--font-mono); text-align: right; white-space: nowrap; }
 .events-archive { border-top: 1px solid var(--color-ink); }
 .year-section {
     display: grid; grid-template-columns: minmax(6rem, 1fr) minmax(0, 3fr);
@@ -213,8 +220,7 @@ li strong { color: var(--color-ink); font-weight: 700; }
 .year-section li:last-child { padding-bottom: 0; }
 @media (max-width: 760px) {
     .education-list { grid-template-columns: 1fr; }
-    .education-item { grid-template-columns: 1fr; gap: .25rem; }
-    .education-item p { grid-template-columns: 1fr; gap: .25rem; }
+    .education-item p { align-items: flex-start; flex-direction: column; gap: .25rem; }
     .education-meta { text-align: left; white-space: normal; }
     .year-header { font-size: 1.2rem; }
 }
@@ -257,7 +263,6 @@ li strong { color: var(--color-ink); font-weight: 700; }
     .experience-heading { grid-column: 1 / span 5; }
     .experience-description { grid-column: 6 / -1; }
     .education-list { grid-template-columns: 1fr; }
-    .education-item { grid-template-columns: minmax(0, 1fr) auto; }
     .year-section { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1.5rem; }
 }
 
