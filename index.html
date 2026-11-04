@@ -9,9 +9,6 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.yourwebsite.com/marcio-tristao" />
     <title>Marcio Tristao - Digital Product Leader | Growth, Monetization, UX, Agile, Media & Strategy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <script type="application/ld+json">
     {
@@ -29,300 +26,259 @@
     </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NHaasGroteskTXPro-55Rg.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NHaasGroteskTXPro-75Bd.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+:root {
+    color-scheme: light;
+    --color-ink: #111111;
+    --color-paper: #ffffff;
+    --color-red: #E53935;
+    --color-red-text: #B3261E;
+    --color-gray: #EAEAEA;
+    --color-muted: #666666;
+    --font-sans: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+    --page-gutter: clamp(1.25rem, 5vw, 5rem);
+    --content-width: 1440px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+    margin: 0;
+    padding: 0 var(--page-gutter) 5rem;
+    max-width: none;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--color-red-text); outline-offset: 4px; }
+.site-nav a:focus-visible { outline-offset: 5px; }
+section[id], .hero, #contact { scroll-margin-top: 5.5rem; }
+main { display: block; min-width: 0; }
+.skip-link {
+    position: absolute; left: -9999px; top: 1rem; z-index: 100;
+    padding: .75rem 1rem; background: var(--color-ink); color: var(--color-paper);
+}
+.skip-link:focus { left: var(--page-gutter); }
+.site-shell { width: 100%; max-width: var(--content-width); margin: 0 auto; }
+.site-nav {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; justify-content: flex-end; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem);
+    min-height: 4.25rem; margin: 0 calc(-1 * var(--page-gutter));
+    padding: .75rem var(--page-gutter);
+    background: rgba(255,255,255,.96); border-bottom: 1px solid var(--color-gray);
+}
+.site-nav a {
+    font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+    text-decoration: none; text-transform: uppercase;
+}
+.site-nav a:hover { color: var(--color-red-text); }
+.hero {
+    min-height: min(790px, calc(100svh - 4.25rem));
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-content: center; column-gap: 1.5rem;
+    padding: clamp(4rem, 10vh, 8rem) 0 clamp(4rem, 9vh, 7rem);
+    border-bottom: 1px solid var(--color-ink);
+}
+.hero-kicker {
+    grid-column: 1 / -1; margin: 0 0 1.25rem;
+    color: var(--color-red-text); font: 700 .75rem/1.2 var(--font-mono);
+    letter-spacing: .12em; text-transform: uppercase;
+}
+.page-title {
+    grid-column: 1 / -1; max-width: 12ch; margin: 0;
+    color: var(--color-ink); font-family: var(--font-sans);
+    font-size: clamp(4rem, 12.5vw, 11.5rem); font-weight: 700;
+    letter-spacing: -.085em; line-height: .82; text-align: left;
+}
+.professional-skills {
+    grid-column: 1 / span 7; max-width: 62ch;
+    margin: 2.5rem 0 0; color: var(--color-muted);
+    font-size: clamp(.95rem, 1.25vw, 1.15rem); line-height: 1.65;
+    text-align: left;
+}
+.welcome-message {
+    grid-column: 9 / -1; align-self: end;
+    margin: 2.5rem 0 0; padding: 0;
+    color: var(--color-ink); font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    line-height: 1.35; text-align: left;
+}
+.welcome-message p { margin: 0; color: inherit; font: inherit; line-height: inherit; }
+.welcome-message strong {
+    display: block; margin: 0 0 .65rem; color: var(--color-red-text);
+    font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+.contact-links {
+    grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem 1.5rem;
+    margin: 3rem 0 0; font: 700 .78rem/1.4 var(--font-mono);
+    text-align: left; text-transform: uppercase;
+}
+.contact-links a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-red); padding-bottom: .2rem; }
+.contact-links a:hover { color: var(--color-red-text); }
+section { width: 100%; max-width: var(--content-width); margin: 0 auto; padding: 5rem 0; border-bottom: 1px solid var(--color-gray); }
+h2 {
+    margin: 0 0 2.5rem; padding: 0; border: 0;
+    color: var(--color-ink); font: 700 clamp(2.5rem, 6vw, 5.5rem)/.95 var(--font-sans);
+    letter-spacing: -.065em;
+}
+h3 {
+    margin: 2.75rem 0 .35rem; color: var(--color-ink);
+    font: 700 clamp(1.25rem, 2vw, 1.75rem)/1.15 var(--font-sans);
+    letter-spacing: -.035em;
+}
+p { margin: 1rem 0; color: #333333; font-size: 1rem; line-height: 1.7; }
+.highlight { margin: 2rem 0 .75rem; color: var(--color-red-text); font: 700 .78rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+ul { margin: 1rem 0 2rem; padding-left: 1.25rem; }
+li { margin: .7rem 0; padding-left: .25rem; color: #333333; font-size: 1rem; line-height: 1.65; }
+li strong { color: var(--color-ink); font-weight: 700; }
+.job-title { margin: .4rem 0 1rem; color: var(--color-muted); font: 400 .8rem/1.5 var(--font-mono); font-style: normal; }
+.education-item { margin: 0; padding: 1rem 0; border-bottom: 1px solid var(--color-gray); }
+.education-item:last-child { border-bottom: 0; }
+.education-item p { margin: 0; }
+.experience-item {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem; padding: 2rem 0 2.5rem;
+    border-bottom: 1px solid var(--color-gray);
+}
+.experience-item:last-child { border-bottom: 0; }
+.experience-heading { grid-column: 1 / span 5; }
+.experience-heading h3 { margin: 0; max-width: 22ch; }
+.experience-heading .job-title { margin-top: .75rem; }
+.experience-description { grid-column: 7 / -1; }
+.experience-description ul { margin: 0; padding-left: 1.1rem; }
+.experience-description li:first-child { margin-top: 0; }
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background-color: #ffffff;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+/* Education and event archive */
+.education-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; }
+.education-item {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline;
+    gap: .5rem 1rem; margin: 0; padding: 1.15rem 0;
+    border-bottom: 1px solid var(--color-gray);
+}
+.education-item p { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .5rem 1rem; margin: 0; }
+.education-item strong { color: var(--color-ink); font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
+.education-meta { color: var(--color-muted); font: 400 .72rem/1.5 var(--font-mono); text-align: right; white-space: nowrap; }
+.events-archive { border-top: 1px solid var(--color-ink); }
+.year-section {
+    display: grid; grid-template-columns: minmax(6rem, 1fr) minmax(0, 3fr);
+    gap: clamp(1rem, 4vw, 4rem); margin: 0; padding: 1.5rem 0 1.7rem;
+    border-bottom: 1px solid var(--color-gray);
+}
+.year-header {
+    position: relative; display: block; margin: 0; padding: 0;
+    color: var(--color-red-text); font: 700 clamp(1.5rem, 3vw, 2.25rem)/1 var(--font-mono);
+    letter-spacing: -.07em;
+}
+.year-section ul { margin: 0; padding: 0; list-style: none; }
+.year-section li {
+    margin: 0; padding: .15rem 0 .65rem; color: #333333;
+    font-size: .98rem; line-height: 1.5;
+}
+.year-section li:last-child { padding-bottom: 0; }
+@media (max-width: 760px) {
+    .education-list { grid-template-columns: 1fr; }
+    .education-item { grid-template-columns: 1fr; gap: .25rem; }
+    .education-item p { grid-template-columns: 1fr; gap: .25rem; }
+    .education-meta { text-align: left; white-space: normal; }
+    .year-header { font-size: 1.2rem; }
+}
+@media (max-width: 420px) {
+}
+@media (max-width: 760px) {
+    .experience-item { grid-template-columns: 1fr; gap: .75rem; padding: 1.75rem 0 2rem; }
+    .experience-heading, .experience-description { grid-column: 1 / -1; }
+    .experience-heading h3 { max-width: none; }
+}
+@media (max-width: 760px) {
+    body { padding-bottom: 3rem; }
+    .site-nav { justify-content: flex-start; gap: 1.1rem; overflow-x: auto; white-space: nowrap; scrollbar-width: thin; overscroll-behavior-x: contain; }
+    .site-nav a { font-size: .65rem; }
+    .hero { min-height: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 1rem; padding: 5rem 0 4rem; }
+    .page-title { font-size: clamp(3.7rem, 17vw, 7rem); }
+    .professional-skills { grid-column: 1 / -1; margin-top: 2rem; }
+    .welcome-message { grid-column: 1 / -1; margin-top: 2.5rem; }
+    .contact-links { margin-top: 2rem; }
+    section { padding: 3.5rem 0; }
+    .year-section { grid-template-columns: 4.5rem 1fr; gap: 1rem; }
+}
+@media (max-width: 420px) {
+    .page-title { font-size: clamp(3.2rem, 16vw, 4.5rem); }
+    .year-section { grid-template-columns: 1fr; gap: .25rem; }
+}
 
-        /* Typography Hierarchy */
-        .page-title {
-            font-family: 'Crimson Text', serif;
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-        }
+@media (min-width: 761px) and (max-width: 1024px) {
+    :root { --page-gutter: clamp(1.5rem, 4vw, 2.75rem); }
+    .site-nav { gap: clamp(.85rem, 2vw, 1.5rem); }
+    .site-nav a { font-size: .68rem; }
+    .hero { column-gap: 1rem; padding-top: 6rem; padding-bottom: 5rem; }
+    .page-title { font-size: clamp(5rem, 11vw, 8rem); }
+    .professional-skills { grid-column: 1 / span 8; }
+    .welcome-message { grid-column: 9 / -1; font-size: 1rem; }
+    .experience-item { gap: 1rem; }
+    .experience-heading { grid-column: 1 / span 5; }
+    .experience-description { grid-column: 6 / -1; }
+    .education-list { grid-template-columns: 1fr; }
+    .education-item { grid-template-columns: minmax(0, 1fr) auto; }
+    .year-section { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1.5rem; }
+}
 
-        .professional-skills {
-            font-size: 1.125rem;
-            font-weight: 400;
-            color: #4a5568;
-            text-align: center;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 3rem;
-        }
-
-        .welcome-message {
-            text-align: center;
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin: 3rem 0;
-            padding: 2.5rem 2rem;
-            line-height: 1.6;
-            color: #1a1a1a;
-        }
-
-        .welcome-message strong {
-            font-weight: 700;
-            color: #000000;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.375rem;
-        }
-
-        .contact-links {
-            text-align: center;
-            margin: 2rem 0 4rem;
-            font-size: 1rem;
-        }
-
-        .contact-links a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 1rem;
-            transition: color 0.2s ease;
-        }
-
-        .contact-links a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-family: 'Crimson Text', serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: #000000;
-            margin: 4rem 0 2rem;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-
-        h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 2.5rem 0 0.75rem;
-            line-height: 1.3;
-        }
-
-        .job-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #4a5568;
-            margin: 0.25rem 0 1rem;
-            font-style: italic;
-        }
-
-        p {
-            font-size: 1.0625rem;
-            line-height: 1.7;
-            color: #374151;
-            margin: 1.25rem 0;
-        }
-
-        .highlight {
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: #000000;
-            margin: 2rem 0 1rem;
-        }
-
-        ul {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        li {
-            font-size: 1.0625rem;
-            line-height: 1.6;
-            color: #374151;
-            margin: 0.875rem 0;
-        }
-
-        li strong {
-            font-weight: 700;
-            color: #1a1a1a;
-        }
-
-        /* Education Typography */
-        .education-item {
-            margin: 1.25rem 0;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .education-item:last-child {
-            border-bottom: none;
-        }
-
-        .education-item p {
-            font-size: 1.0625rem;
-            margin: 0;
-        }
-
-        /* Training Section Typography */
-        .year-section {
-            margin: 2rem 0;
-        }
-
-        .year-header {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #d1d5db;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .year-section p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #4a5568;
-        }
-
-        /* Responsive Typography */
-        @media (max-width: 768px) {
-            body {
-                padding: 2rem 1.5rem;
-                font-size: 15px;
-            }
-
-            .page-title {
-                font-size: clamp(2.5rem, 10vw, 4rem);
-            }
-
-            .professional-skills {
-                font-size: 1.0625rem;
-            }
-
-            .welcome-message {
-                font-size: 1.125rem;
-                padding: 2rem 1.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-                margin: 3rem 0 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.25rem;
-                margin: 2rem 0 0.5rem;
-            }
-
-            .contact-links a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 1.5rem 1rem;
-            }
-
-            .page-title {
-                font-size: clamp(2rem, 12vw, 3rem);
-            }
-
-            .professional-skills {
-                font-size: 1rem;
-            }
-
-            .welcome-message {
-                font-size: 1.125rem;
-                padding: 2rem 0.75rem;
-            }
-
-            .welcome-message strong {
-                font-size: 1.75rem;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-            }
-
-            ul {
-                padding-left: 1.5rem;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                font-size: 12pt;
-                line-height: 1.5;
-                max-width: none;
-                margin: 0;
-                padding: 1in;
-            }
-
-            .welcome-message {
-                background-color: transparent;
-                border: 1px solid #ccc;
-            }
-
-            .contact-links a {
-                color: #000;
-            }
-
-            h2 {
-                page-break-after: avoid;
-            }
-
-            .year-section {
-                page-break-inside: avoid;
-            }
-        }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+@media print {
+    body { padding: 0; }
+    .site-nav, .skip-link { display: none; }
+    .hero { min-height: auto; }
+    section { break-inside: auto; }
+    .year-section { break-inside: avoid; }
+}
     </style>
 </head>
 
 <body>
-    <header>
+    <a class="skip-link" href="#introduction">Skip to content</a>
+    <div class="site-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="#introduction">Introduction</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main id="main-content">
+    <header class="hero" id="top">
+        <p class="hero-kicker">Digital Product Leadership / Portfolio</p>
         <h1 class="page-title">Marcio Tristao</h1>
         <p class="professional-skills">Head of Product | Staff Product Manager | Group Product Manager | Product Vision & Strategy | Product Roadmap | Team Leadership | KPIs | Data-Driven | Growth | B2C | B2B | A/B Test| Growth & Monetization | UX | Agile | Media | Affiliation | EdTech</p>
+        <div class="welcome-message">
+            <p><strong>Digital Product Lover.</strong> Crime Series binger and aspiring surfer.<br>Angela, Sofia, and João are my heartbeats.<br>Let's create something unforgettable!</p>
+        </div>
+        <div class="contact-links" id="contact">
+            <a href="mailto:mtristao@gmail.com">Email Me</a> |
+            <a href="https://wa.me/5521999418453" target="_blank" rel="noopener noreferrer">WhatsApp</a> |
+            <a href="https://www.linkedin.com/in/marciotristao/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </header>
 
-    <!-- Welcome Message -->
-    <div class="welcome-message">
-        <p><strong>Digital Product Lover.</strong>Crime Series binger and aspiring surfer.<br>Angela, Sofia, and João are my heartbeats.<br>Let's create something unforgettable!</p>
-    </div>
-
-    <!-- Contact Links at the Top -->
-    <div class="contact-links">
-        <a href="mailto:mtristao@gmail.com">Email Me</a> |
-        <a href="https://wa.me/5521999418453" target="_blank">WhatsApp</a> |
-        <a href="https://www.linkedin.com/in/marciotristao/" target="_blank">LinkedIn</a>
-    </div>
-
-    <section>
+    <section id="introduction">
         <h2>Introduction</h2>
         <p>🇺🇸 Executive with 25+ years of experience in Digital Product Management, UX, and Product Strategy. Skilled in leading multidisciplinary teams, delivering scalable and innovative digital products, and driving measurable business impact. Expertise in agile methodologies, MVPs, POCs, A/B testing, and data-driven decision-making. Strong communicator with the ability to articulate complex concepts to executives and stakeholders, ensuring alignment and success across projects.</p>
        
@@ -337,8 +293,6 @@
         
         <p class="highlight">What Drives Me:</p>
         <p>A relentless desire to learn, evolve, and innovate across industries, fueled by collaboration with talented professionals from diverse cultures. I thrive in environments that challenge me to exceed goals, deliver excellence, and create value at every step.</p>
-        <p>
-        <p>
         <p>🇧🇷 Executivo com mais de 25 anos de experiência em Digital Product Management, UX e Product Strategy. Experiência em liderar equipes multidisciplinares, entregar produtos digitais escaláveis e inovadores e gerar impacto de negócio mensurável. Especialista em metodologias ágeis, MVPs, POCs, A/B testing e data-driven decision-making. Excelente comunicador, com habilidade para articular conceitos complexos a executivos e stakeholders, garantindo alinhamento e sucesso em projetos.</p>        
         
         <p class="highlight">Destaques:</p>
@@ -354,219 +308,319 @@
         <p>Tenho uma energia incansável para aprender, evoluir e inovar. O que mais me inspira é colaborar com profissionais talentosos de diferentes culturas, enfrentando desafios que me motivam a superar metas, entregar excelência e gerar valor em cada etapa da jornada.</p>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>Experience</h2>
 
-        <h3>Afya – Education and Product Ecosystem for Doctors and Medical Students</h3>
-        <p class="job-title">Group Product Manager | Nov 2025 – Present</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Afya – Education and Product Ecosystem for Doctors and Medical Students</h3>
+                <p class="job-title">Group Product Manager | Nov 2025 – Present</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>At Afya, I led 5 PMs and 1 Design Lead, focusing on student satisfaction (NPS 50+) in preparatory courses for medical residency, postgraduate studies (online, hybrid, and in-person), mentoring courses, CRM, AI, and checkout.</li>
             <li>Later, I moved to the team developing the ecosystem integration project for doctors and medical students, where I was responsible for medical updates (News) and structuring a "Social Network" to connect doctors.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Better Collective – Sports Media & Digital Innovation Group</h3>
-        <p class="job-title">Senior Product Manager, South America | Nov 2023 – Sep 2025</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Better Collective – Sports Media & Digital Innovation Group</h3>
+                <p class="job-title">Senior Product Manager, South America | Nov 2023 – Sep 2025</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>I joined Better Collective, a leading Danish sports media company, to lead the integration of Futbolsites, part of Playmaker, a Canadian holding acquired by Better Collective.</li>
             <li>Once the integration advanced, I transitioned to overseeing South America's product portfolio, driving growth and innovation across the region.</li>
             <li>I structured the proof of concept for a loyalty program that reached 60k users in the initial phase.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Gshow, Big Brother Brasil, and Other Reality Shows + Food Products</h3>
-        <p class="job-title">Product Development Manager | Jan 2021 – April 2023</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Gshow, Big Brother Brasil, and Other Reality Shows + Food Products</h3>
+                <p class="job-title">Product Development Manager | Jan 2021 – April 2023</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Led three high-performing, multidisciplinary development teams, driving innovation and delivering impactful digital products for millions of users.</li>
             <li>Spearheaded the development of GShow (gshow.com), a leading ShowBiz platform with over 20 million monthly users, and Big Brother Brasil (BBB), Brazil's largest reality show, attracting 30+ million monthly users.</li>
             <li>Oversaw the creation of Receitas.com, a recipe platform offering diverse culinary solutions for users.</li>
             <li>Directed the development of corporate platforms like Somos.Globo and Screening.globo.com, reducing development costs by 40% and improving SLA response times from hours to minutes.</li>
             <li>Conceptualized and launched Big Game BBB, a fantasy game based on Big Brother Brasil, achieving remarkable success with 300K+ users, 500K+ downloads, and 49M+ screenviews.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Ge.com, Sports News, and Cartola Fantasy Game</h3>
-        <p class="job-title">Product Development Manager | Nov 2013 – Dec 2020</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Ge.com, Sports News, and Cartola Fantasy Game</h3>
+                <p class="job-title">Product Development Manager | Nov 2013 – Dec 2020</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Successfully managed high-profile projects, including the 2014 and 2018 FIFA World Cups and the 2016 Olympics, scaling my team threefold and delivering record-breaking results.</li>
             <li>Redesigned CartolaFC, Brazil's most popular fantasy game, and launched Cartola Pro, a successful paid subscription model (D2C).</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Globo UX Team</h3>
-        <p class="job-title">UX Manager | Jan 2012 – Nov 2013</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Globo UX Team</h3>
+                <p class="job-title">UX Manager | Jan 2012 – Nov 2013</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Restructured and revitalized the UX team, creating a career development framework for designers and establishing a clear professional progression path.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>G1 (Hard News Product)</h3>
-        <p class="job-title">Product Development Manager | Jan 2010 – Dec 2011</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>G1 (Hard News Product)</h3>
+                <p class="job-title">Product Development Manager | Jan 2010 – Dec 2011</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Led the development of systems for one of Brazil's largest newsrooms, launching specialized news products for the Economy and Automotive sectors.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Globo.com Main Page</h3>
-        <p class="job-title">UX Manager + Product Owner | Jan 2006 – Dec 2009</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Globo.com Main Page</h3>
+                <p class="job-title">UX Manager + Product Owner | Jan 2006 – Dec 2009</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Managed the UX team while serving as the Product Owner for Globo.com's main page, streamlining workflows and improving collaboration.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Globo</h3>
-        <p class="job-title">Senior UX Designer | Apr 2001 – Dec 2006</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Globo</h3>
+                <p class="job-title">Senior UX Designer | Apr 2001 – Dec 2006</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Led the IA team in creating and optimizing flagship websites like globo.com, globonews.com, and globoesporte.com.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>TRISCOM</h3>
-        <p class="job-title">Entrepreneur | Jan 1999 – Mar 2001</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>TRISCOM</h3>
+                <p class="job-title">Entrepreneur | Jan 1999 – Mar 2001</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Developed websites for major clients like BR Distribuidora and Petrobras, and contributed articles to leading publications.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>BR Distribuidora</h3>
-        <p class="job-title">Public Relations (PR) | Dec 1996 – Jan 1999</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>BR Distribuidora</h3>
+                <p class="job-title">Public Relations (PR) | Dec 1996 – Jan 1999</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Managed internal and external communications, fostering strong relationships between the company and its stakeholders.</li>
         </ul>
+            </div>
+        </article>
     </section>
 
-    <section>
+    <section id="education">
         <h2>📚 Education</h2>
+        <div class="education-list">
         <div class="education-item">
-            <p><strong>Program for Leadership Development (HBS)</strong> | Boston, MA (2022/23)</p>
+            <p><strong>Program for Leadership Development (HBS)</strong><span class="education-meta">| Boston, MA (2022/23)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Strategic Marketing Management (HBS)</strong> | Boston, MA (2017)</p>
+            <p><strong>Strategic Marketing Management (HBS)</strong><span class="education-meta">| Boston, MA (2017)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>The Innovative Technology Leader (Stanford GSB)</strong> | Stanford, CA (2017)</p>
+            <p><strong>The Innovative Technology Leader (Stanford GSB)</strong><span class="education-meta">| Stanford, CA (2017)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>MBA Executive (COPPEAD)</strong> | Rio de Janeiro, RJ (2012)</p>
+            <p><strong>MBA Executive (COPPEAD)</strong><span class="education-meta">| Rio de Janeiro, RJ (2012)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Effective Strategies for Media Companies (HBS)</strong> | Boston, MA (2010)</p>
+            <p><strong>Effective Strategies for Media Companies (HBS)</strong><span class="education-meta">| Boston, MA (2010)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Master's Degree in Design (PUC-RJ)</strong> | Rio de Janeiro, RJ (2008)</p>
+            <p><strong>Master's Degree in Design (PUC-RJ)</strong><span class="education-meta">| Rio de Janeiro, RJ (2008)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>MBA in Business Management (IBMEC)</strong> | Rio de Janeiro, RJ (2003)</p>
+            <p><strong>MBA in Business Management (IBMEC)</strong><span class="education-meta">| Rio de Janeiro, RJ (2003)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Post Graduation in Marketing (ESTÁCIO)</strong> | 1996</p>
+            <p><strong>Post Graduation in Marketing (ESTÁCIO)</strong><span class="education-meta">| 1996</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Graduation in Communication - Journalism (ESTÁCIO)</strong> | 1995</p>
+            <p><strong>Graduation in Communication - Journalism (ESTÁCIO)</strong><span class="education-meta">| 1995</span></p>
+        </div>
         </div>
     </section>
 
-    <section>
+    <section id="events">
         <h2>Training, Congress & Events</h2>
+        <div class="events-archive">
         
-        <div class="year-section">
-            <div class="year-header">2025</div>
-            <p>Rio Innovation Week | Rio de Janeiro, RJ<br>
-            SiGMA AMERICAS | São Paulo, SP<br>
-            Next.io CxO Brazil | São Paulo, SP</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2025</h3>
+            <ul>
+                <li>Rio Innovation Week | Rio de Janeiro, RJ</li>
+                <li>SiGMA AMERICAS | São Paulo, SP</li>
+                <li>Next.io CxO Brazil | São Paulo, SP</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2024</div>
-            <p>SBC Rio | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2024</h3>
+            <ul>
+                <li>SBC Rio | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2019</div>
-            <p>Amazon RE:MARS (workshop: Voice control for any "Thing") | Las Vegas, NV<br>
-            Electronic Entertainment Expo (E3) | Los Angeles, CA</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2019</h3>
+            <ul>
+                <li>Amazon RE:MARS (workshop: Voice control for any "Thing") | Las Vegas, NV</li>
+                <li>Electronic Entertainment Expo (E3) | Los Angeles, CA</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2018</div>
-            <p>Google I/O | Mountain View, CA<br>
-            3° Encontro Internacional de Marketing Esportivo (Coppead) | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2018</h3>
+            <ul>
+                <li>Google I/O | Mountain View, CA</li>
+                <li>3° Encontro Internacional de Marketing Esportivo (Coppead) | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2017</div>
-            <p>Data Science Dojo (Data Science Dojo) | Chicago, IL</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2017</h3>
+            <ul>
+                <li>Data Science Dojo (Data Science Dojo) | Chicago, IL</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2016</div>
-            <p>BigData e Data Science (FGV-Rio) | Rio de Janeiro, RJ<br>
-            Measuring User Experience (globo.com and NN/g - Kathryn Whitenton) | Rio de Janeiro, RJ<br>
-            Analytics and User Experience (globo.com and NN/g - Raluca Budiu) | Rio de Janeiro, RJ<br>
-            Coaching com Luis Carlos Berti, (globo.com and Crescimentum)</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2016</h3>
+            <ul>
+                <li>BigData e Data Science (FGV-Rio) | Rio de Janeiro, RJ</li>
+                <li>Measuring User Experience (globo.com and NN/g - Kathryn Whitenton) | Rio de Janeiro, RJ</li>
+                <li>Analytics and User Experience (globo.com and NN/g - Raluca Budiu) | Rio de Janeiro, RJ</li>
+                <li>Coaching com Luis Carlos Berti, (globo.com and Crescimentum)</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2015</div>
-            <p>Líder do Futuro Executivo (Crescimentum) | Itú, SP</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2015</h3>
+            <ul>
+                <li>Líder do Futuro Executivo (Crescimentum) | Itú, SP</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2014</div>
-            <p>Sloan Sports Conference (MIT) | Boston, MA<br>
-            Study Tour Newsrooms e Web Video (WAN-IFRA) | Boston and NY</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2014</h3>
+            <ul>
+                <li>Sloan Sports Conference (MIT) | Boston, MA</li>
+                <li>Study Tour Newsrooms e Web Video (WAN-IFRA) | Boston and NY</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2013</div>
-            <p>Big Data (MIT) | Boston, MA</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2013</h3>
+            <ul>
+                <li>Big Data (MIT) | Boston, MA</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2012</div>
-            <p>MBA Internation Module in Universidade of Bologna | Itália<br>
-            CES | Las Vegas, NV</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2012</h3>
+            <ul>
+                <li>MBA Internation Module in Universidade of Bologna | Itália</li>
+                <li>CES | Las Vegas, NV</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2011</div>
-            <p>Interaction Design (Cooper) | Rio, RJ<br>
-            e-metrics | NY<br>
-            SemTech | San Francisco, CA<br>
-            Amana-Key - APG Sênior - Management Advanced Program | São Paulo</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2011</h3>
+            <ul>
+                <li>Interaction Design (Cooper) | Rio, RJ</li>
+                <li>e-metrics | NY</li>
+                <li>SemTech | San Francisco, CA</li>
+                <li>Amana-Key - APG Sênior - Management Advanced Program | São Paulo</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2010</div>
-            <p>Management Development Program (FDC) | Nova Lima, MG</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2010</h3>
+            <ul>
+                <li>Management Development Program (FDC) | Nova Lima, MG</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2009</div>
-            <p>Search Engine Strategies | San Jose, CA<br>
-            Pierre Lévy - Collective Intelligence in Cyberspace | Rio, RJ<br>
-            Online News Association Conference | San Francisco, CA<br>
-            Modelagem de Dados de Negócios (PUC-RJ) | Rio, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2009</h3>
+            <ul>
+                <li>Search Engine Strategies | San Jose, CA</li>
+                <li>Pierre Lévy - Collective Intelligence in Cyberspace | Rio, RJ</li>
+                <li>Online News Association Conference | San Francisco, CA</li>
+                <li>Modelagem de Dados de Negócios (PUC-RJ) | Rio, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2008</div>
-            <p>IA Summit | Miami, FL<br>
-            Web 2.0 Expo | San Francisco, CA<br>
-            UX Week | San Francisco, CA<br>
-            ISWC - International Semantic Web Conference | Karlsruhe, Baden-Württember<br>
-            Scrum Master Certification (globo.com and Boris Gloger) | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2008</h3>
+            <ul>
+                <li>IA Summit | Miami, FL</li>
+                <li>Web 2.0 Expo | San Francisco, CA</li>
+                <li>UX Week | San Francisco, CA</li>
+                <li>ISWC - International Semantic Web Conference | Karlsruhe, Baden-Württember</li>
+                <li>Scrum Master Certification (globo.com and Boris Gloger) | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2007</div>
-            <p>CES | Las Vegas, NV<br>
-            IA Summit | Las Vegas, NV<br>
-            Beyond Best Practices (Adaptive Path) | Rio de Janeiro, RJ<br>
-            Designing for Interaction (Adaptive Path) | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2007</h3>
+            <ul>
+                <li>CES | Las Vegas, NV</li>
+                <li>IA Summit | Las Vegas, NV</li>
+                <li>Beyond Best Practices (Adaptive Path) | Rio de Janeiro, RJ</li>
+                <li>Designing for Interaction (Adaptive Path) | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2006</div>
-            <p>IA Summit | Vancouver, BC<br>
-            IA Retreat (PUC-Chile) | Santiago and Santa Cruz</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2006</h3>
+            <ul>
+                <li>IA Summit | Vancouver, BC</li>
+                <li>IA Retreat (PUC-Chile) | Santiago and Santa Cruz</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2005</div>
-            <p>Congresso Latino-Americano de Interazione Humano-Computador - CLIHC | Rio de Janeiro, RJ</p>
+        <article class="year-section">
+            <h3 class="year-header">2005</h3>
+            <ul>
+                <li>Congresso Latino-Americano de Interazione Humano-Computador - CLIHC | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
         </div>
     </section>
+    </main>
+    </div>
 </body>
 </html>
