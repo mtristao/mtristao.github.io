@@ -154,6 +154,24 @@ li strong { color: var(--color-ink); font-weight: 700; }
 .year-section { display: grid; grid-template-columns: 8rem 1fr; gap: 1.5rem; margin: 0; padding: 1.1rem 0; border-bottom: 1px solid var(--color-gray); }
 .year-header { margin: 0; padding: 0; border: 0; color: var(--color-red); font: 700 1.25rem/1.4 var(--font-mono); }
 .year-section p { margin: 0; color: #333333; font-size: .98rem; }
+
+.experience-item {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem; padding: 2rem 0 2.5rem;
+    border-bottom: 1px solid var(--color-gray);
+}
+.experience-item:last-child { border-bottom: 0; }
+.experience-heading { grid-column: 1 / span 5; }
+.experience-heading h3 { margin: 0; max-width: 22ch; }
+.experience-heading .job-title { margin-top: .75rem; }
+.experience-description { grid-column: 7 / -1; }
+.experience-description ul { margin: 0; padding-left: 1.1rem; }
+.experience-description li:first-child { margin-top: 0; }
+@media (max-width: 760px) {
+    .experience-item { grid-template-columns: 1fr; gap: .75rem; padding: 1.75rem 0 2rem; }
+    .experience-heading, .experience-description { grid-column: 1 / -1; }
+    .experience-heading h3 { max-width: none; }
+}
 @media (max-width: 760px) {
     body { padding-bottom: 3rem; }
     .site-nav { justify-content: flex-start; gap: 1.1rem; overflow-x: auto; white-space: nowrap; }
@@ -243,73 +261,133 @@ li strong { color: var(--color-ink); font-weight: 700; }
     <section id="experience">
         <h2>Experience</h2>
 
-        <h3>Afya – Education and Product Ecosystem for Doctors and Medical Students</h3>
-        <p class="job-title">Group Product Manager | Nov 2025 – Present</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Afya – Education and Product Ecosystem for Doctors and Medical Students</h3>
+                <p class="job-title">Group Product Manager | Nov 2025 – Present</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>At Afya, I led 5 PMs and 1 Design Lead, focusing on student satisfaction (NPS 50+) in preparatory courses for medical residency, postgraduate studies (online, hybrid, and in-person), mentoring courses, CRM, AI, and checkout.</li>
             <li>Later, I moved to the team developing the ecosystem integration project for doctors and medical students, where I was responsible for medical updates (News) and structuring a "Social Network" to connect doctors.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Better Collective – Sports Media & Digital Innovation Group</h3>
-        <p class="job-title">Senior Product Manager, South America | Nov 2023 – Sep 2025</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Better Collective – Sports Media & Digital Innovation Group</h3>
+                <p class="job-title">Senior Product Manager, South America | Nov 2023 – Sep 2025</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>I joined Better Collective, a leading Danish sports media company, to lead the integration of Futbolsites, part of Playmaker, a Canadian holding acquired by Better Collective.</li>
             <li>Once the integration advanced, I transitioned to overseeing South America's product portfolio, driving growth and innovation across the region.</li>
             <li>I structured the proof of concept for a loyalty program that reached 60k users in the initial phase.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Gshow, Big Brother Brasil, and Other Reality Shows + Food Products</h3>
-        <p class="job-title">Product Development Manager | Jan 2021 – April 2023</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Gshow, Big Brother Brasil, and Other Reality Shows + Food Products</h3>
+                <p class="job-title">Product Development Manager | Jan 2021 – April 2023</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Led three high-performing, multidisciplinary development teams, driving innovation and delivering impactful digital products for millions of users.</li>
             <li>Spearheaded the development of GShow (gshow.com), a leading ShowBiz platform with over 20 million monthly users, and Big Brother Brasil (BBB), Brazil's largest reality show, attracting 30+ million monthly users.</li>
             <li>Oversaw the creation of Receitas.com, a recipe platform offering diverse culinary solutions for users.</li>
             <li>Directed the development of corporate platforms like Somos.Globo and Screening.globo.com, reducing development costs by 40% and improving SLA response times from hours to minutes.</li>
             <li>Conceptualized and launched Big Game BBB, a fantasy game based on Big Brother Brasil, achieving remarkable success with 300K+ users, 500K+ downloads, and 49M+ screenviews.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Ge.com, Sports News, and Cartola Fantasy Game</h3>
-        <p class="job-title">Product Development Manager | Nov 2013 – Dec 2020</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Ge.com, Sports News, and Cartola Fantasy Game</h3>
+                <p class="job-title">Product Development Manager | Nov 2013 – Dec 2020</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Successfully managed high-profile projects, including the 2014 and 2018 FIFA World Cups and the 2016 Olympics, scaling my team threefold and delivering record-breaking results.</li>
             <li>Redesigned CartolaFC, Brazil's most popular fantasy game, and launched Cartola Pro, a successful paid subscription model (D2C).</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Globo UX Team</h3>
-        <p class="job-title">UX Manager | Jan 2012 – Nov 2013</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Globo UX Team</h3>
+                <p class="job-title">UX Manager | Jan 2012 – Nov 2013</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Restructured and revitalized the UX team, creating a career development framework for designers and establishing a clear professional progression path.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>G1 (Hard News Product)</h3>
-        <p class="job-title">Product Development Manager | Jan 2010 – Dec 2011</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>G1 (Hard News Product)</h3>
+                <p class="job-title">Product Development Manager | Jan 2010 – Dec 2011</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Led the development of systems for one of Brazil's largest newsrooms, launching specialized news products for the Economy and Automotive sectors.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Globo.com Main Page</h3>
-        <p class="job-title">UX Manager + Product Owner | Jan 2006 – Dec 2009</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Globo.com Main Page</h3>
+                <p class="job-title">UX Manager + Product Owner | Jan 2006 – Dec 2009</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Managed the UX team while serving as the Product Owner for Globo.com's main page, streamlining workflows and improving collaboration.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>Globo</h3>
-        <p class="job-title">Senior UX Designer | Apr 2001 – Dec 2006</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>Globo</h3>
+                <p class="job-title">Senior UX Designer | Apr 2001 – Dec 2006</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Led the IA team in creating and optimizing flagship websites like globo.com, globonews.com, and globoesporte.com.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>TRISCOM</h3>
-        <p class="job-title">Entrepreneur | Jan 1999 – Mar 2001</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>TRISCOM</h3>
+                <p class="job-title">Entrepreneur | Jan 1999 – Mar 2001</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Developed websites for major clients like BR Distribuidora and Petrobras, and contributed articles to leading publications.</li>
         </ul>
+            </div>
+        </article>
 
-        <h3>BR Distribuidora</h3>
-        <p class="job-title">Public Relations (PR) | Dec 1996 – Jan 1999</p>
-        <ul>
+        <article class="experience-item">
+            <div class="experience-heading">
+                <h3>BR Distribuidora</h3>
+                <p class="job-title">Public Relations (PR) | Dec 1996 – Jan 1999</p>
+            </div>
+            <div class="experience-description">
+                <ul>
             <li>Managed internal and external communications, fostering strong relationships between the company and its stakeholders.</li>
         </ul>
+            </div>
+        </article>
     </section>
 
     <section id="education">
