@@ -168,10 +168,22 @@ li strong { color: var(--color-ink); font-weight: 700; }
     border-bottom: 1px solid var(--color-gray);
 }
 .experience-item:last-child { border-bottom: 0; }
-.experience-heading { grid-column: 1 / span 5; }
-.experience-heading h3 { margin: 0; max-width: 22ch; }
+.experience-heading { grid-column: 1 / span 4; }
+.experience-heading h3 { margin: 0; max-width: 24ch; font-size: clamp(1.15rem, 1.7vw, 1.5rem); }
 .experience-heading .job-title { margin-top: .75rem; }
-.experience-description { grid-column: 7 / -1; }
+.experience-meta { margin: .75rem 0 0; color: var(--color-muted); font: 400 .72rem/1.6 var(--font-mono); }
+.experience-description { grid-column: 6 / -1; min-width: 0; }
+.experience-description p { margin: 0 0 1rem; }
+.experience-description ul { margin: .4rem 0 1.5rem; padding-left: 1.1rem; }
+.experience-description li:first-child { margin-top: 0; }
+.experience-label { margin: 1.5rem 0 .5rem !important; color: var(--color-red-text) !important; font: 700 .7rem/1.4 var(--font-mono) !important; letter-spacing: .08em; }
+.experience-note { margin: 1.5rem 0 !important; color: var(--color-muted) !important; font-size: .88rem !important; }
+.experience-skills { margin-top: 1.5rem !important; color: var(--color-muted) !important; font-size: .82rem !important; line-height: 1.6 !important; }
+.experience-skills strong { color: var(--color-ink); }
+.experience-company { margin: 2rem 0 0; border-top: 1px solid var(--color-ink); }
+.experience-company-heading { display: flex; align-items: baseline; gap: 1rem; padding: 1.5rem 0 .5rem; }
+.experience-company-heading h3 { margin: 0; font-size: 2rem; }
+.experience-company-heading .job-title { margin: 0; }
 .experience-description ul { margin: 0; padding-left: 1.1rem; }
 .experience-description li:first-child { margin-top: 0; }
 
@@ -214,6 +226,7 @@ li strong { color: var(--color-ink); font-weight: 700; }
 @media (max-width: 760px) {
     .experience-item { grid-template-columns: 1fr; gap: .75rem; padding: 1.75rem 0 2rem; }
     .experience-heading, .experience-description { grid-column: 1 / -1; }
+    .experience-company-heading { align-items: baseline; flex-wrap: wrap; gap: .25rem 1rem; }
     .experience-heading h3 { max-width: none; }
 }
 @media (max-width: 760px) {
@@ -327,134 +340,165 @@ li strong { color: var(--color-ink); font-weight: 700; }
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
-
+        <h2>Experiência</h2>
         <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Afya – Education and Product Ecosystem for Doctors and Medical Students</h3>
-                <p class="job-title">Group Product Manager | Nov 2025 – Present</p>
-            </div>
+            <div class="experience-heading"><h3>Afya</h3><p class="job-title">Group Product Manager | EdTech | Portfolio Management, Growth, AI | B2C</p><p class="experience-meta">novembro de 2025 - Present (1 ano 1 mês)<br>Rio de Janeiro, Brasil</p></div>
             <div class="experience-description">
+                <p>Liderança da Tribo Bridge*: 5 Product Managers e 1 Coordenadora de Product Design em 5 squads (Aquisição, Mentoria, AI, Preparatórios e CRM), em um portfólio B2C com mais de 56 mil médicos-alunos. Hoje lidero, na nova plataforma, a Value Stream de atualização médica (News) e de rede social para médicos.</p>
+                <p class="experience-label">RESPONSABILIDADES:</p>
                 <ul>
-            <li>At Afya, I led 5 PMs and 1 Design Lead, focusing on student satisfaction (NPS 50+) in preparatory courses for medical residency, postgraduate studies (online, hybrid, and in-person), mentoring courses, CRM, AI, and checkout.</li>
-            <li>Later, I moved to the team developing the ecosystem integration project for doctors and medical students, where I was responsible for medical updates (News) and structuring a "Social Network" to connect doctors.</li>
-        </ul>
+                    <li>Product Strategy, roadmap e OKRs para a jornada do médico, da aquisição à pós-graduação</li>
+                    <li>Portfolio Management de Preparatórios para Títulos e Residência e de Pós-Graduação (híbrida, presencial e remota)</li>
+                    <li>Growth: funil de aquisição e checkout, com foco em Conversion e receita B2C</li>
+                    <li>Estruturação das frentes de AI e de CRM aplicadas a produto</li>
+                    <li>Evolução da Mentoria, com foco em engajamento, Retention, aprovação e NPS</li>
+                    <li>Scrum e Kanban na gestão dos squads; Product Analytics para acompanhar KPIs de aquisição, Conversion e Retention</li>
+                    <li>Priorização do roadmap orientada à geração de receita, com participação ativa nas definições de P&amp;L do segmento</li>
+                </ul>
+                <p class="experience-label">RESULTADOS / IMPACTOS:</p>
+                <ul>
+                    <li>Crescimento de 23,6% na base de alunos de Educação Continuada, que chegou a 56.237 (2T26 vs. 2T25)</li>
+                    <li>Receita B2C de R$ 134,8 milhões no 1S26, alta de 7,5% vs. 1S25</li>
+                    <li>Expansão de 12,8% na base de Pós-Graduação (10.213 alunos) e de 35,1% em outros cursos (36.780 alunos)</li>
+                    <li>Compra multiproduto no checkout (Conversion): pós-graduação e outros produtos em um único pedido</li>
+                    <li>AI aplicada à identificação de conteúdo desatualizado</li>
+                </ul>
+                <p class="experience-note">* Por que sugeri o nome "Bridge"? Para que os times se sentissem conectados ao futuro e parte da construção da nova plataforma, e não apenas mantendo um sistema legado.</p>
+                <p class="experience-skills"><strong>Skills:</strong> Product Strategy, Portfolio Management, Growth, Conversion, Retention, AI, CRM, B2C, Squads / Tribos, OKRs, User Experience (UX), EdTech, Product Analytics, Scrum, Kanban</p>
             </div>
         </article>
-
         <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Better Collective – Sports Media & Digital Innovation Group</h3>
-                <p class="job-title">Senior Product Manager, South America | Nov 2023 – Sep 2025</p>
-            </div>
+            <div class="experience-heading"><h3>Better Collective</h3><p class="job-title">Group Product Manager, LATAM | iGaming | Monetization, Growth, AI | B2C, B2B</p><p class="experience-meta">novembro de 2023 - abril de 2025 (1 ano 6 meses)<br>Rio de Janeiro, Brasil</p></div>
             <div class="experience-description">
+                <p>Gestão do portfólio LATAM (México, Argentina, Chile e Brasil) de um grupo global de mídia esportiva e iGaming, responsável por 20% da receita global.</p>
+                <p class="experience-label">RESPONSABILIDADES:</p>
                 <ul>
-            <li>I joined Better Collective, a leading Danish sports media company, to lead the integration of Futbolsites, part of Playmaker, a Canadian holding acquired by Better Collective.</li>
-            <li>Once the integration advanced, I transitioned to overseeing South America's product portfolio, driving growth and innovation across the region.</li>
-            <li>I structured the proof of concept for a loyalty program that reached 60k users in the initial phase.</li>
-        </ul>
+                    <li>Portfolio Management de 25 sites de futebol, com expansão de inventário comercial e mídia programática para Conversion</li>
+                    <li>Growth e Monetization: integração de AI, MarTech e SEO (com Google Analytics) na estratégia de aquisição de usuários</li>
+                    <li>Go-to-Market do Programa de Fidelidade, da POC à escala, com foco em Retention</li>
+                    <li>Desenvolvimento de parcerias B2B com empresas de mídia, seguros, artigos esportivos e apostas</li>
+                    <li>Liderança da integração pós-aquisição (PMI) de um grupo com mais de 300 profissionais, alinhando 5 áreas em 4 países aos modelos, processos e ferramentas da matriz</li>
+                    <li>Liderança por influência de times multidisciplinares (projetos, engenharia, redação e conteúdo), sem gestão direta</li>
+                    <li>Scrum e Kanban com os times multidisciplinares; Product Analytics (Google Analytics) para orientar aquisição e Monetization</li>
+                    <li>Priorização do portfólio orientada à geração de receita, com participação ativa nas definições de P&amp;L da região</li>
+                </ul>
+                <p class="experience-label">RESULTADOS / IMPACTOS:</p>
+                <ul>
+                    <li>20% da receita global gerada pelo portfólio LATAM</li>
+                    <li>60 mil usuários no Programa de Fidelidade nos três primeiros meses, a partir de uma POC enxuta em grupos de WhatsApp</li>
+                    <li>2 parcerias B2B fechadas (seguros e artigos esportivos), abrindo nova frente de receita a partir de dados de usuários e leads</li>
+                    <li>Protótipo de novo produto apresentado à liderança LATAM, hipótese inicial que validou o Product-Market Fit do Programa de Fidelidade</li>
+                    <li>PMI concluída, do mapeamento da estrutura do grupo à transição para as lideranças definitivas</li>
+                </ul>
+                <p class="experience-skills"><strong>Skills:</strong> Portfolio Management, Growth, Monetization, Go-to-Market, Product-Market Fit, Retention, Conversion, AI, MarTech, SEO, B2C, B2B, Post-Merger Integration (PMI), Stakeholder Management, Product Analytics, Scrum, Kanban</p>
             </div>
         </article>
-
+        <div class="experience-company">
+            <div class="experience-company-heading"><h3>Globo</h3><p class="job-title">22 anos 2 meses</p></div>
+            <article class="experience-item">
+                <div class="experience-heading"><h3>Group Product Manager | GShow, Big Game BBB, Receitas.com | Monetization | B2C, B2B</h3><p class="job-title">janeiro de 2021 - maio de 2023 (2 anos 5 meses)<br>Rio de Janeiro, Brasil</p></div>
+                <div class="experience-description">
+                    <p>Liderança de 3 squads de produto (GShow, Receitas.com e projetos especiais, como o Screening, plataforma B2B de compra de conteúdo da Globo), com gestão direta de 3 PMs e mais de 15 profissionais de produto, design e engenharia.</p>
+                    <p class="experience-label">RESPONSABILIDADES:</p>
+                    <ul>
+                        <li>Product Strategy e execução, com foco em Growth de audiência, Monetization e inovação em plataformas digitais e de streaming</li>
+                        <li>Go-to-Market do Big Game BBB (fantasy game B2C), com lançamento das edições de 2022 e 2023</li>
+                        <li>Monetization via AdTech (visualizações pagas e banners) e Video Shopping, com engajamento apoiado em MarTech e SEO</li>
+                        <li>User Experience (UX): protótipos, testes de usabilidade e feedback de usuários para validar MVPs e Product-Market Fit</li>
+                        <li>Scrum e Kanban na gestão dos squads; Product Analytics para acompanhar audiência, engajamento e receita</li>
+                        <li>Priorização do roadmap orientada à geração de receita, com participação ativa nas definições de P&amp;L dos produtos</li>
+                    </ul>
+                    <p class="experience-label">RESULTADOS / IMPACTOS:</p>
+                    <ul>
+                        <li>Big Game BBB 2022: mais de 300 mil inscritos, 103 mil grupos e 12 milhões de palpites na edição de estreia</li>
+                        <li>Retention de 30% dos jogadores da primeira rodada até a final, com 34 mil menções no X</li>
+                        <li>Superação em 10% da meta de visualizações de vídeos no primeiro semestre de 2023</li>
+                        <li>Video Shopping com C&amp;A, L'Oréal e Dengo Chocolates, diversificando as fontes de receita</li>
+                        <li>Receitas.com: +36% em autoridade de busca via SEO</li>
+                        <li>Screening (B2B): tempo de atualização reduzido para menos de 5 minutos, com melhoria de SLA para clientes</li>
+                    </ul>
+                    <p class="experience-skills"><strong>Skills:</strong> Product Strategy, Growth, Monetization, Go-to-Market, Product-Market Fit, Retention, User Experience (UX), B2C, B2B, AdTech, MarTech, SEO, Streaming, Squads, Product Analytics, Scrum, Kanban</p>
+                </div>
+            </article>
+            <article class="experience-item">
+                <div class="experience-heading"><h3>Group Product Manager | GloboEsporte e Cartola | Growth, Monetization | B2C</h3><p class="job-title">novembro de 2013 - dezembro de 2020 (7 anos 2 meses)<br>Rio de Janeiro, Brasil</p></div>
+                <div class="experience-description">
+                    <p>Gestão direta de 5 Product Managers, liderando designers e cientistas de dados em squads com mais de 80 colaboradores diretos e indiretos, à frente do GloboEsporte.com e do Cartola (fantasy game com 4 milhões de jogadores ativos).</p>
+                    <p class="experience-label">RESPONSABILIDADES:</p>
+                    <ul>
+                        <li>Visão de produto unificada do GloboEsporte.com e do Cartola, com foco em Growth, Retention e Monetization</li>
+                        <li>A/B Testing no GloboEsporte.com: recomendação de conteúdo (algoritmo vs. editorial), elementos de cadastro de usuários e Conversion em assinantes</li>
+                        <li>Go-to-Market do Cartola PRO: modelo pago B2C (freemium), patrocínios in-game e apps iOS e Android</li>
+                        <li>Estratégias de push para aumentar recorrência e reduzir Churn</li>
+                        <li>User Experience (UX): redesenhos mobile-first após a Copa de 2014 e as Olimpíadas de 2016, com dados de eventos ao vivo</li>
+                        <li>Unificação das transmissões da Globo, do Sportv e do Premiere para atrair audiência e fazer upsell</li>
+                        <li>Scrum e Kanban nos squads; Product Analytics e participação nas definições de P&amp;L para priorizar o roadmap por receita</li>
+                    </ul>
+                    <p class="experience-label">RESULTADOS / IMPACTOS:</p>
+                    <ul>
+                        <li>Cartola PRO: pico de 500 mil usuários pagantes em uma base de 4 milhões, Conversion de 12,5%</li>
+                        <li>Até 40% das assinaturas do Premiere geradas pelo GloboEsporte.com</li>
+                        <li>Aumento de 2 a 5 vezes nas visitas diárias via celular em 2014, com o redesenho mobile-first</li>
+                        <li>Crescimento da receita de anúncios com a visão unificada e os patrocínios in-game</li>
+                        <li>UX do Cartola modernizada com dados em tempo real, atraindo público mais jovem e convertendo durante os jogos ao vivo</li>
+                    </ul>
+                    <p class="experience-skills"><strong>Skills:</strong> Product Strategy, Growth, Monetization, Go-to-Market, A/B Testing, Retention, Churn, Conversion, User Experience (UX), B2C, Freemium, Upsell, Mobile Product, Squads, AdTech, Product Analytics, Scrum, Kanban</p>
+                </div>
+            </article>
+            <article class="experience-item">
+                <div class="experience-heading"><h3>Group Product Manager | G1 e produtos de Jornalismo | Growth, SEO | B2C</h3><p class="job-title">janeiro de 2010 - novembro de 2013 (3 anos 11 meses)<br>Rio de Janeiro, Brasil</p></div>
+                <div class="experience-description">
+                    <p>Product Strategy e execução do G1, com foco em consolidar o portal como líder de audiência em notícias no Brasil. Gestão direta de 2 Product Managers e liderança de mais de 15 desenvolvedores e designers.</p>
+                    <p class="experience-label">RESPONSABILIDADES:</p>
+                    <ul>
+                        <li>Growth de audiência B2C com soluções baseadas em dados e estruturação semântica para SEO</li>
+                        <li>Portfolio Management dos produtos de Jornalismo, com criação das verticais de Economia e Autos e serviços de parceiros integrados</li>
+                        <li>Monetization: novas oportunidades de investimento publicitário apoiadas no crescimento de audiência</li>
+                        <li>Integração entre produto, User Experience (UX) e desenvolvimento de pessoas</li>
+                        <li>Scrum e Kanban na gestão dos times; Product Analytics para acompanhar audiência e orientar a priorização, com participação nas definições de P&amp;L</li>
+                    </ul>
+                    <p class="experience-label">RESULTADOS / IMPACTOS:</p>
+                    <ul>
+                        <li>Crescimento de cerca de 2 milhões de usuários únicos com o lançamento dos portais de Economia e Autos, via estruturação semântica do conteúdo, consolidando a liderança na categoria News (Comscore)</li>
+                        <li>Aumento da receita de mídia, com novas oportunidades comerciais</li>
+                        <li>2 novas verticais lançadas (Economia e Autos)</li>
+                        <li>Maior relevância nas buscas do Google</li>
+                    </ul>
+                    <p class="experience-skills"><strong>Skills:</strong> Product Strategy, Growth, Portfolio Management, Monetization, SEO, Data-Driven Product, User Experience (UX), B2C, Digital Media, Ad Revenue, Product Analytics, Scrum, Kanban</p>
+                </div>
+            </article>
+            <article class="experience-item">
+                <div class="experience-heading"><h3>Gerente de Arquitetura da Informação | Product Owner da Home do Globo.com</h3><p class="job-title">janeiro de 2006 - dezembro de 2009 (4 anos)<br>Rio de Janeiro, Brasil</p></div>
+                <div class="experience-description">
+                    <p class="experience-label">RESPONSABILIDADES:</p>
+                    <ul>
+                        <li>Liderança de um time de 20 a 25 Arquitetos da Informação e Designers, com reestruturação centrada em pessoas, desempenho e cultura</li>
+                        <li>Atuação como Product Owner da Home do Globo.com, criando a estrutura de navegação e de conteúdo da página</li>
+                        <li>Organização e destaque dos conteúdos de Jornalismo, Esportes e Entretenimento na Home, direcionando audiência para os principais produtos do portal</li>
+                        <li>Gestão de talentos, com implantação de modelos de avaliação contínua, programas de desenvolvimento de carreira e mentoria ativa</li>
+                    </ul>
+                    <p class="experience-label">RESULTADOS / IMPACTOS:</p>
+                    <ul>
+                        <li>Turnover zerado em um time de 20 a 25 profissionais, partindo de uma saída por mês, com aumento do engajamento da equipe</li>
+                        <li>Aumento da distribuição de audiência da Home do Globo.com para os principais produtos de Jornalismo, Esportes e Entretenimento</li>
+                        <li>Modelo de avaliação contínua e programas de carreira implantados na área de Arquitetura da Informação</li>
+                        <li>Transição de Arquitetura da Informação para Produto, assumindo a Home do Globo.com como Product Owner</li>
+                    </ul>
+                    <p class="experience-skills"><strong>Skills:</strong> Information Architecture, UX, Product Ownership, People Management, Talent Development, Mentoring, Content Strategy, Navigation Design, Digital Media</p>
+                </div>
+            </article>
+            <article class="experience-item">
+                <div class="experience-heading"><h3>Senior Information Architect</h3><p class="job-title">abril de 2001 - dezembro de 2006 (5 anos 9 meses)<br>Rio de Janeiro, Brasil</p></div>
+                <div class="experience-description"><p>Senior Information Architect responsável pela conceituação, detalhamento de fluxos e especificação de sistemas para diversos produtos, como globo.com, globonews.com, g1.com.br, globoesporte.com, Ego, Paparazzo e outros, contribuindo para a sua proeminência em suas categorias.</p></div>
+            </article>
+        </div>
         <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Gshow, Big Brother Brasil, and Other Reality Shows + Food Products</h3>
-                <p class="job-title">Product Development Manager | Jan 2021 – April 2023</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Led three high-performing, multidisciplinary development teams, driving innovation and delivering impactful digital products for millions of users.</li>
-            <li>Spearheaded the development of GShow (gshow.com), a leading ShowBiz platform with over 20 million monthly users, and Big Brother Brasil (BBB), Brazil's largest reality show, attracting 30+ million monthly users.</li>
-            <li>Oversaw the creation of Receitas.com, a recipe platform offering diverse culinary solutions for users.</li>
-            <li>Directed the development of corporate platforms like Somos.Globo and Screening.globo.com, reducing development costs by 40% and improving SLA response times from hours to minutes.</li>
-            <li>Conceptualized and launched Big Game BBB, a fantasy game based on Big Brother Brasil, achieving remarkable success with 300K+ users, 500K+ downloads, and 49M+ screenviews.</li>
-        </ul>
-            </div>
+            <div class="experience-heading"><h3>Triscom</h3><p class="job-title">Empreendedor - Web Writer, Information Architect<br>janeiro de 1999 - março de 2001 (2 anos 3 meses)<br>Rio de Janeiro e Região</p></div>
+            <div class="experience-description"></div>
         </article>
-
         <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Ge.com, Sports News, and Cartola Fantasy Game</h3>
-                <p class="job-title">Product Development Manager | Nov 2013 – Dec 2020</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Successfully managed high-profile projects, including the 2014 and 2018 FIFA World Cups and the 2016 Olympics, scaling my team threefold and delivering record-breaking results.</li>
-            <li>Redesigned CartolaFC, Brazil's most popular fantasy game, and launched Cartola Pro, a successful paid subscription model (D2C).</li>
-        </ul>
-            </div>
-        </article>
-
-        <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Globo UX Team</h3>
-                <p class="job-title">UX Manager | Jan 2012 – Nov 2013</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Restructured and revitalized the UX team, creating a career development framework for designers and establishing a clear professional progression path.</li>
-        </ul>
-            </div>
-        </article>
-
-        <article class="experience-item">
-            <div class="experience-heading">
-                <h3>G1 (Hard News Product)</h3>
-                <p class="job-title">Product Development Manager | Jan 2010 – Dec 2011</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Led the development of systems for one of Brazil's largest newsrooms, launching specialized news products for the Economy and Automotive sectors.</li>
-        </ul>
-            </div>
-        </article>
-
-        <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Globo.com Main Page</h3>
-                <p class="job-title">UX Manager + Product Owner | Jan 2006 – Dec 2009</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Managed the UX team while serving as the Product Owner for Globo.com's main page, streamlining workflows and improving collaboration.</li>
-        </ul>
-            </div>
-        </article>
-
-        <article class="experience-item">
-            <div class="experience-heading">
-                <h3>Globo</h3>
-                <p class="job-title">Senior UX Designer | Apr 2001 – Dec 2006</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Led the IA team in creating and optimizing flagship websites like globo.com, globonews.com, and globoesporte.com.</li>
-        </ul>
-            </div>
-        </article>
-
-        <article class="experience-item">
-            <div class="experience-heading">
-                <h3>TRISCOM</h3>
-                <p class="job-title">Entrepreneur | Jan 1999 – Mar 2001</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Developed websites for major clients like BR Distribuidora and Petrobras, and contributed articles to leading publications.</li>
-        </ul>
-            </div>
-        </article>
-
-        <article class="experience-item">
-            <div class="experience-heading">
-                <h3>BR Distribuidora</h3>
-                <p class="job-title">Public Relations (PR) | Dec 1996 – Jan 1999</p>
-            </div>
-            <div class="experience-description">
-                <ul>
-            <li>Managed internal and external communications, fostering strong relationships between the company and its stakeholders.</li>
-        </ul>
-            </div>
+            <div class="experience-heading"><h3>BR Distribuidora</h3><p class="job-title">Relações públicas<br>dezembro de 1996 - janeiro de 1999 (2 anos 2 meses)<br>Rio de Janeiro, Brasil</p></div>
+            <div class="experience-description"></div>
         </article>
     </section>
 
