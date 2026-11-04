@@ -29,300 +29,186 @@
     </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background-color: #ffffff;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Typography Hierarchy */
-        .page-title {
-            font-family: 'Crimson Text', serif;
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-        }
-
-        .professional-skills {
-            font-size: 1.125rem;
-            font-weight: 400;
-            color: #4a5568;
-            text-align: center;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 3rem;
-        }
-
-        .welcome-message {
-            text-align: center;
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin: 3rem 0;
-            padding: 2.5rem 2rem;
-            line-height: 1.6;
-            color: #1a1a1a;
-        }
-
-        .welcome-message strong {
-            font-weight: 700;
-            color: #000000;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.375rem;
-        }
-
-        .contact-links {
-            text-align: center;
-            margin: 2rem 0 4rem;
-            font-size: 1rem;
-        }
-
-        .contact-links a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 1rem;
-            transition: color 0.2s ease;
-        }
-
-        .contact-links a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-family: 'Crimson Text', serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: #000000;
-            margin: 4rem 0 2rem;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-
-        h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 2.5rem 0 0.75rem;
-            line-height: 1.3;
-        }
-
-        .job-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #4a5568;
-            margin: 0.25rem 0 1rem;
-            font-style: italic;
-        }
-
-        p {
-            font-size: 1.0625rem;
-            line-height: 1.7;
-            color: #374151;
-            margin: 1.25rem 0;
-        }
-
-        .highlight {
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: #000000;
-            margin: 2rem 0 1rem;
-        }
-
-        ul {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        li {
-            font-size: 1.0625rem;
-            line-height: 1.6;
-            color: #374151;
-            margin: 0.875rem 0;
-        }
-
-        li strong {
-            font-weight: 700;
-            color: #1a1a1a;
-        }
-
-        /* Education Typography */
-        .education-item {
-            margin: 1.25rem 0;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .education-item:last-child {
-            border-bottom: none;
-        }
-
-        .education-item p {
-            font-size: 1.0625rem;
-            margin: 0;
-        }
-
-        /* Training Section Typography */
-        .year-section {
-            margin: 2rem 0;
-        }
-
-        .year-header {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #d1d5db;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .year-section p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #4a5568;
-        }
-
-        /* Responsive Typography */
-        @media (max-width: 768px) {
-            body {
-                padding: 2rem 1.5rem;
-                font-size: 15px;
-            }
-
-            .page-title {
-                font-size: clamp(2.5rem, 10vw, 4rem);
-            }
-
-            .professional-skills {
-                font-size: 1.0625rem;
-            }
-
-            .welcome-message {
-                font-size: 1.125rem;
-                padding: 2rem 1.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-                margin: 3rem 0 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.25rem;
-                margin: 2rem 0 0.5rem;
-            }
-
-            .contact-links a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 1.5rem 1rem;
-            }
-
-            .page-title {
-                font-size: clamp(2rem, 12vw, 3rem);
-            }
-
-            .professional-skills {
-                font-size: 1rem;
-            }
-
-            .welcome-message {
-                font-size: 1.125rem;
-                padding: 2rem 0.75rem;
-            }
-
-            .welcome-message strong {
-                font-size: 1.75rem;
-            }
-
-            h2 {
-                font-size: 1.75rem;
-            }
-
-            ul {
-                padding-left: 1.5rem;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                font-size: 12pt;
-                line-height: 1.5;
-                max-width: none;
-                margin: 0;
-                padding: 1in;
-            }
-
-            .welcome-message {
-                background-color: transparent;
-                border: 1px solid #ccc;
-            }
-
-            .contact-links a {
-                color: #000;
-            }
-
-            h2 {
-                page-break-after: avoid;
-            }
-
-            .year-section {
-                page-break-inside: avoid;
-            }
-        }
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NHaasGroteskTXPro-55Rg.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NHaasGroteskTXPro-75Bd.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+:root {
+    color-scheme: light;
+    --color-ink: #111111;
+    --color-paper: #ffffff;
+    --color-red: #E53935;
+    --color-gray: #EAEAEA;
+    --color-muted: #666666;
+    --font-sans: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+    --page-gutter: clamp(1.25rem, 5vw, 5rem);
+    --content-width: 1440px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+    margin: 0;
+    padding: 0 var(--page-gutter) 5rem;
+    max-width: none;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--color-red); outline-offset: 4px; }
+.skip-link {
+    position: absolute; left: -9999px; top: 1rem; z-index: 100;
+    padding: .75rem 1rem; background: var(--color-ink); color: var(--color-paper);
+}
+.skip-link:focus { left: var(--page-gutter); }
+.site-shell { width: 100%; max-width: var(--content-width); margin: 0 auto; }
+.site-nav {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; justify-content: flex-end; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem);
+    min-height: 4.25rem; margin: 0 calc(-1 * var(--page-gutter));
+    padding: .75rem var(--page-gutter);
+    background: rgba(255,255,255,.96); border-bottom: 1px solid var(--color-gray);
+}
+.site-nav a {
+    font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+    text-decoration: none; text-transform: uppercase;
+}
+.site-nav a:hover { color: var(--color-red); }
+.hero {
+    min-height: min(790px, calc(100svh - 4.25rem));
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-content: center; column-gap: 1.5rem;
+    padding: clamp(4rem, 10vh, 8rem) 0 clamp(4rem, 9vh, 7rem);
+    border-bottom: 1px solid var(--color-ink);
+}
+.hero-kicker {
+    grid-column: 1 / -1; margin: 0 0 1.25rem;
+    color: var(--color-red); font: 700 .75rem/1.2 var(--font-mono);
+    letter-spacing: .12em; text-transform: uppercase;
+}
+.page-title {
+    grid-column: 1 / -1; max-width: 12ch; margin: 0;
+    color: var(--color-ink); font-family: var(--font-sans);
+    font-size: clamp(4rem, 12.5vw, 11.5rem); font-weight: 700;
+    letter-spacing: -.085em; line-height: .82; text-align: left;
+}
+.professional-skills {
+    grid-column: 1 / span 7; max-width: 62ch;
+    margin: 2.5rem 0 0; color: var(--color-muted);
+    font-size: clamp(.95rem, 1.25vw, 1.15rem); line-height: 1.65;
+    text-align: left;
+}
+.welcome-message {
+    grid-column: 9 / -1; align-self: end;
+    margin: 2.5rem 0 0; padding: 0;
+    color: var(--color-ink); font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    line-height: 1.35; text-align: left;
+}
+.welcome-message p { margin: 0; color: inherit; font: inherit; line-height: inherit; }
+.welcome-message strong {
+    display: block; margin: 0 0 .65rem; color: var(--color-red);
+    font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+.contact-links {
+    grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem 1.5rem;
+    margin: 3rem 0 0; font: 700 .78rem/1.4 var(--font-mono);
+    text-align: left; text-transform: uppercase;
+}
+.contact-links a { color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-red); padding-bottom: .2rem; }
+.contact-links a:hover { color: var(--color-red); }
+section { width: 100%; max-width: var(--content-width); margin: 0 auto; padding: 5rem 0; border-bottom: 1px solid var(--color-gray); }
+h2 {
+    margin: 0 0 2.5rem; padding: 0; border: 0;
+    color: var(--color-ink); font: 700 clamp(2.5rem, 6vw, 5.5rem)/.95 var(--font-sans);
+    letter-spacing: -.065em;
+}
+h3 {
+    margin: 2.75rem 0 .35rem; color: var(--color-ink);
+    font: 700 clamp(1.25rem, 2vw, 1.75rem)/1.15 var(--font-sans);
+    letter-spacing: -.035em;
+}
+p { margin: 1rem 0; color: #333333; font-size: 1rem; line-height: 1.7; }
+.highlight { margin: 2rem 0 .75rem; color: var(--color-red); font: 700 .78rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+ul { margin: 1rem 0 2rem; padding-left: 1.25rem; }
+li { margin: .7rem 0; padding-left: .25rem; color: #333333; font-size: 1rem; line-height: 1.65; }
+li strong { color: var(--color-ink); font-weight: 700; }
+.job-title { margin: .4rem 0 1rem; color: var(--color-muted); font: 400 .8rem/1.5 var(--font-mono); font-style: normal; }
+.education-item { margin: 0; padding: 1rem 0; border-bottom: 1px solid var(--color-gray); }
+.education-item:last-child { border-bottom: 0; }
+.education-item p { margin: 0; }
+.year-section { display: grid; grid-template-columns: 8rem 1fr; gap: 1.5rem; margin: 0; padding: 1.1rem 0; border-bottom: 1px solid var(--color-gray); }
+.year-header { margin: 0; padding: 0; border: 0; color: var(--color-red); font: 700 1.25rem/1.4 var(--font-mono); }
+.year-section p { margin: 0; color: #333333; font-size: .98rem; }
+@media (max-width: 760px) {
+    body { padding-bottom: 3rem; }
+    .site-nav { justify-content: flex-start; gap: 1.1rem; overflow-x: auto; white-space: nowrap; }
+    .site-nav a { font-size: .65rem; }
+    .hero { min-height: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 1rem; padding: 5rem 0 4rem; }
+    .page-title { font-size: clamp(3.7rem, 17vw, 7rem); }
+    .professional-skills { grid-column: 1 / -1; margin-top: 2rem; }
+    .welcome-message { grid-column: 1 / -1; margin-top: 2.5rem; }
+    .contact-links { margin-top: 2rem; }
+    section { padding: 3.5rem 0; }
+    .year-section { grid-template-columns: 4.5rem 1fr; gap: 1rem; }
+}
+@media (max-width: 420px) {
+    .page-title { font-size: clamp(3.2rem, 16vw, 4.5rem); }
+    .year-section { grid-template-columns: 1fr; gap: .25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+@media print {
+    body { padding: 0; }
+    .site-nav, .skip-link { display: none; }
+    .hero { min-height: auto; }
+    section { break-inside: auto; }
+    .year-section { break-inside: avoid; }
+}
     </style>
 </head>
 
 <body>
-    <header>
+    <a class="skip-link" href="#introduction">Skip to content</a>
+    <div class="site-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="#introduction">Introduction</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <header class="hero" id="top">
+        <p class="hero-kicker">Digital Product Leadership / Portfolio</p>
         <h1 class="page-title">Marcio Tristao</h1>
         <p class="professional-skills">Head of Product | Staff Product Manager | Group Product Manager | Product Vision & Strategy | Product Roadmap | Team Leadership | KPIs | Data-Driven | Growth | B2C | B2B | A/B Test| Growth & Monetization | UX | Agile | Media | Affiliation | EdTech</p>
+        <div class="welcome-message">
+            <p><strong>Digital Product Lover.</strong>Crime Series binger and aspiring surfer.<br>Angela, Sofia, and João are my heartbeats.<br>Let's create something unforgettable!</p>
+        </div>
+        <div class="contact-links" id="contact">
+            <a href="mailto:mtristao@gmail.com">Email Me</a>
+            <a href="https://wa.me/5521999418453" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/marciotristao/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </header>
 
-    <!-- Welcome Message -->
-    <div class="welcome-message">
-        <p><strong>Digital Product Lover.</strong>Crime Series binger and aspiring surfer.<br>Angela, Sofia, and João are my heartbeats.<br>Let's create something unforgettable!</p>
-    </div>
-
-    <!-- Contact Links at the Top -->
-    <div class="contact-links">
-        <a href="mailto:mtristao@gmail.com">Email Me</a> |
-        <a href="https://wa.me/5521999418453" target="_blank">WhatsApp</a> |
-        <a href="https://www.linkedin.com/in/marciotristao/" target="_blank">LinkedIn</a>
-    </div>
-
-    <section>
+    <section id="introduction">
         <h2>Introduction</h2>
         <p>🇺🇸 Executive with 25+ years of experience in Digital Product Management, UX, and Product Strategy. Skilled in leading multidisciplinary teams, delivering scalable and innovative digital products, and driving measurable business impact. Expertise in agile methodologies, MVPs, POCs, A/B testing, and data-driven decision-making. Strong communicator with the ability to articulate complex concepts to executives and stakeholders, ensuring alignment and success across projects.</p>
        
@@ -354,7 +240,7 @@
         <p>Tenho uma energia incansável para aprender, evoluir e inovar. O que mais me inspira é colaborar com profissionais talentosos de diferentes culturas, enfrentando desafios que me motivam a superar metas, entregar excelência e gerar valor em cada etapa da jornada.</p>
     </section>
 
-    <section>
+    <section id="experience">
         <h2>Experience</h2>
 
         <h3>Afya – Education and Product Ecosystem for Doctors and Medical Students</h3>
@@ -426,7 +312,7 @@
         </ul>
     </section>
 
-    <section>
+    <section id="education">
         <h2>📚 Education</h2>
         <div class="education-item">
             <p><strong>Program for Leadership Development (HBS)</strong> | Boston, MA (2022/23)</p>
@@ -457,7 +343,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="events">
         <h2>Training, Congress & Events</h2>
         
         <div class="year-section">
@@ -568,5 +454,6 @@
             <p>Congresso Latino-Americano de Interazione Humano-Computador - CLIHC | Rio de Janeiro, RJ</p>
         </div>
     </section>
+    </div>
 </body>
 </html>
