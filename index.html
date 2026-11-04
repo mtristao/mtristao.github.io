@@ -167,6 +167,44 @@ li strong { color: var(--color-ink); font-weight: 700; }
 .experience-description { grid-column: 7 / -1; }
 .experience-description ul { margin: 0; padding-left: 1.1rem; }
 .experience-description li:first-child { margin-top: 0; }
+
+/* Education and event archive */
+.education-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; }
+.education-item {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline;
+    gap: .5rem 1rem; margin: 0; padding: 1.15rem 0;
+    border-bottom: 1px solid var(--color-gray);
+}
+.education-item p { display: contents; }
+.education-item strong { color: var(--color-ink); font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
+.education-meta { color: var(--color-muted); font: 400 .72rem/1.5 var(--font-mono); text-align: right; white-space: nowrap; }
+.events-archive { border-top: 1px solid var(--color-ink); }
+.year-section {
+    display: grid; grid-template-columns: minmax(6rem, 1fr) minmax(0, 3fr);
+    gap: clamp(1rem, 4vw, 4rem); margin: 0; padding: 1.5rem 0 1.7rem;
+    border-bottom: 1px solid var(--color-gray);
+}
+.year-header {
+    position: relative; display: block; margin: 0; padding: 0;
+    color: var(--color-red); font: 700 clamp(1.5rem, 3vw, 2.25rem)/1 var(--font-mono);
+    letter-spacing: -.07em;
+}
+.year-section ul { margin: 0; padding: 0; list-style: none; }
+.year-section li {
+    margin: 0; padding: .15rem 0 .65rem; color: #333333;
+    font-size: .98rem; line-height: 1.5;
+}
+.year-section li:last-child { padding-bottom: 0; }
+@media (max-width: 760px) {
+    .education-list { grid-template-columns: 1fr; }
+    .education-item { grid-template-columns: 1fr; gap: .25rem; }
+    .education-meta { text-align: left; white-space: normal; }
+    .year-section { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; }
+    .year-header { font-size: 1.2rem; }
+}
+@media (max-width: 420px) {
+    .year-section { grid-template-columns: 1fr; gap: .5rem; }
+}
 @media (max-width: 760px) {
     .experience-item { grid-template-columns: 1fr; gap: .75rem; padding: 1.75rem 0 2rem; }
     .experience-heading, .experience-description { grid-column: 1 / -1; }
@@ -392,144 +430,182 @@ li strong { color: var(--color-ink); font-weight: 700; }
 
     <section id="education">
         <h2>📚 Education</h2>
+        <div class="education-list">
         <div class="education-item">
-            <p><strong>Program for Leadership Development (HBS)</strong> | Boston, MA (2022/23)</p>
+            <p><strong>Program for Leadership Development (HBS)</strong><span class="education-meta">Boston, MA (2022/23)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Strategic Marketing Management (HBS)</strong> | Boston, MA (2017)</p>
+            <p><strong>Strategic Marketing Management (HBS)</strong><span class="education-meta">Boston, MA (2017)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>The Innovative Technology Leader (Stanford GSB)</strong> | Stanford, CA (2017)</p>
+            <p><strong>The Innovative Technology Leader (Stanford GSB)</strong><span class="education-meta">Stanford, CA (2017)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>MBA Executive (COPPEAD)</strong> | Rio de Janeiro, RJ (2012)</p>
+            <p><strong>MBA Executive (COPPEAD)</strong><span class="education-meta">Rio de Janeiro, RJ (2012)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Effective Strategies for Media Companies (HBS)</strong> | Boston, MA (2010)</p>
+            <p><strong>Effective Strategies for Media Companies (HBS)</strong><span class="education-meta">Boston, MA (2010)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Master's Degree in Design (PUC-RJ)</strong> | Rio de Janeiro, RJ (2008)</p>
+            <p><strong>Master's Degree in Design (PUC-RJ)</strong><span class="education-meta">Rio de Janeiro, RJ (2008)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>MBA in Business Management (IBMEC)</strong> | Rio de Janeiro, RJ (2003)</p>
+            <p><strong>MBA in Business Management (IBMEC)</strong><span class="education-meta">Rio de Janeiro, RJ (2003)</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Post Graduation in Marketing (ESTÁCIO)</strong> | 1996</p>
+            <p><strong>Post Graduation in Marketing (ESTÁCIO)</strong><span class="education-meta">1996</span></p>
         </div>
         <div class="education-item">
-            <p><strong>Graduation in Communication - Journalism (ESTÁCIO)</strong> | 1995</p>
+            <p><strong>Graduation in Communication - Journalism (ESTÁCIO)</strong><span class="education-meta">1995</span></p>
+        </div>
         </div>
     </section>
 
     <section id="events">
         <h2>Training, Congress & Events</h2>
+        <div class="events-archive">
         
-        <div class="year-section">
-            <div class="year-header">2025</div>
-            <p>Rio Innovation Week | Rio de Janeiro, RJ<br>
-            SiGMA AMERICAS | São Paulo, SP<br>
-            Next.io CxO Brazil | São Paulo, SP</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2025</h3>
+            <ul>
+                <li>Rio Innovation Week | Rio de Janeiro, RJ</li>
+                <li>SiGMA AMERICAS | São Paulo, SP</li>
+                <li>Next.io CxO Brazil | São Paulo, SP</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2024</div>
-            <p>SBC Rio | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2024</h3>
+            <ul>
+                <li>SBC Rio | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2019</div>
-            <p>Amazon RE:MARS (workshop: Voice control for any "Thing") | Las Vegas, NV<br>
-            Electronic Entertainment Expo (E3) | Los Angeles, CA</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2019</h3>
+            <ul>
+                <li>Amazon RE:MARS (workshop: Voice control for any "Thing") | Las Vegas, NV</li>
+                <li>Electronic Entertainment Expo (E3) | Los Angeles, CA</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2018</div>
-            <p>Google I/O | Mountain View, CA<br>
-            3° Encontro Internacional de Marketing Esportivo (Coppead) | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2018</h3>
+            <ul>
+                <li>Google I/O | Mountain View, CA</li>
+                <li>3° Encontro Internacional de Marketing Esportivo (Coppead) | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2017</div>
-            <p>Data Science Dojo (Data Science Dojo) | Chicago, IL</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2017</h3>
+            <ul>
+                <li>Data Science Dojo (Data Science Dojo) | Chicago, IL</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2016</div>
-            <p>BigData e Data Science (FGV-Rio) | Rio de Janeiro, RJ<br>
-            Measuring User Experience (globo.com and NN/g - Kathryn Whitenton) | Rio de Janeiro, RJ<br>
-            Analytics and User Experience (globo.com and NN/g - Raluca Budiu) | Rio de Janeiro, RJ<br>
-            Coaching com Luis Carlos Berti, (globo.com and Crescimentum)</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2016</h3>
+            <ul>
+                <li>BigData e Data Science (FGV-Rio) | Rio de Janeiro, RJ</li>
+                <li>Measuring User Experience (globo.com and NN/g - Kathryn Whitenton) | Rio de Janeiro, RJ</li>
+                <li>Analytics and User Experience (globo.com and NN/g - Raluca Budiu) | Rio de Janeiro, RJ</li>
+                <li>Coaching com Luis Carlos Berti, (globo.com and Crescimentum)</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2015</div>
-            <p>Líder do Futuro Executivo (Crescimentum) | Itú, SP</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2015</h3>
+            <ul>
+                <li>Líder do Futuro Executivo (Crescimentum) | Itú, SP</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2014</div>
-            <p>Sloan Sports Conference (MIT) | Boston, MA<br>
-            Study Tour Newsrooms e Web Video (WAN-IFRA) | Boston and NY</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2014</h3>
+            <ul>
+                <li>Sloan Sports Conference (MIT) | Boston, MA</li>
+                <li>Study Tour Newsrooms e Web Video (WAN-IFRA) | Boston and NY</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2013</div>
-            <p>Big Data (MIT) | Boston, MA</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2013</h3>
+            <ul>
+                <li>Big Data (MIT) | Boston, MA</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2012</div>
-            <p>MBA Internation Module in Universidade of Bologna | Itália<br>
-            CES | Las Vegas, NV</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2012</h3>
+            <ul>
+                <li>MBA Internation Module in Universidade of Bologna | Itália</li>
+                <li>CES | Las Vegas, NV</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2011</div>
-            <p>Interaction Design (Cooper) | Rio, RJ<br>
-            e-metrics | NY<br>
-            SemTech | San Francisco, CA<br>
-            Amana-Key - APG Sênior - Management Advanced Program | São Paulo</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2011</h3>
+            <ul>
+                <li>Interaction Design (Cooper) | Rio, RJ</li>
+                <li>e-metrics | NY</li>
+                <li>SemTech | San Francisco, CA</li>
+                <li>Amana-Key - APG Sênior - Management Advanced Program | São Paulo</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2010</div>
-            <p>Management Development Program (FDC) | Nova Lima, MG</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2010</h3>
+            <ul>
+                <li>Management Development Program (FDC) | Nova Lima, MG</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2009</div>
-            <p>Search Engine Strategies | San Jose, CA<br>
-            Pierre Lévy - Collective Intelligence in Cyberspace | Rio, RJ<br>
-            Online News Association Conference | San Francisco, CA<br>
-            Modelagem de Dados de Negócios (PUC-RJ) | Rio, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2009</h3>
+            <ul>
+                <li>Search Engine Strategies | San Jose, CA</li>
+                <li>Pierre Lévy - Collective Intelligence in Cyberspace | Rio, RJ</li>
+                <li>Online News Association Conference | San Francisco, CA</li>
+                <li>Modelagem de Dados de Negócios (PUC-RJ) | Rio, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2008</div>
-            <p>IA Summit | Miami, FL<br>
-            Web 2.0 Expo | San Francisco, CA<br>
-            UX Week | San Francisco, CA<br>
-            ISWC - International Semantic Web Conference | Karlsruhe, Baden-Württember<br>
-            Scrum Master Certification (globo.com and Boris Gloger) | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2008</h3>
+            <ul>
+                <li>IA Summit | Miami, FL</li>
+                <li>Web 2.0 Expo | San Francisco, CA</li>
+                <li>UX Week | San Francisco, CA</li>
+                <li>ISWC - International Semantic Web Conference | Karlsruhe, Baden-Württember</li>
+                <li>Scrum Master Certification (globo.com and Boris Gloger) | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2007</div>
-            <p>CES | Las Vegas, NV<br>
-            IA Summit | Las Vegas, NV<br>
-            Beyond Best Practices (Adaptive Path) | Rio de Janeiro, RJ<br>
-            Designing for Interaction (Adaptive Path) | Rio de Janeiro, RJ</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2007</h3>
+            <ul>
+                <li>CES | Las Vegas, NV</li>
+                <li>IA Summit | Las Vegas, NV</li>
+                <li>Beyond Best Practices (Adaptive Path) | Rio de Janeiro, RJ</li>
+                <li>Designing for Interaction (Adaptive Path) | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2006</div>
-            <p>IA Summit | Vancouver, BC<br>
-            IA Retreat (PUC-Chile) | Santiago and Santa Cruz</p>
-        </div>
+        <article class="year-section">
+            <h3 class="year-header">2006</h3>
+            <ul>
+                <li>IA Summit | Vancouver, BC</li>
+                <li>IA Retreat (PUC-Chile) | Santiago and Santa Cruz</li>
+            </ul>
+        </article>
 
-        <div class="year-section">
-            <div class="year-header">2005</div>
-            <p>Congresso Latino-Americano de Interazione Humano-Computador - CLIHC | Rio de Janeiro, RJ</p>
+        <article class="year-section">
+            <h3 class="year-header">2005</h3>
+            <ul>
+                <li>Congresso Latino-Americano de Interazione Humano-Computador - CLIHC | Rio de Janeiro, RJ</li>
+            </ul>
+        </article>
         </div>
     </section>
     </div>
