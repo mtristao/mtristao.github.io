@@ -279,7 +279,7 @@ li strong { color: var(--color-ink); font-weight: 700; }
 }
     
 /* Big Game BBB selected case */
-.big-game-case { margin: 1.25rem 0 3rem; padding: clamp(1.5rem, 3vw, 2.5rem) 0 3rem; border-top: 1px solid var(--color-gray); border-bottom: 1px solid var(--color-ink); }
+.big-game-case { grid-column: 1 / -1; min-width: 0; margin: .5rem 0 0; padding: 1rem 0 0; }
 .case-kicker, .case-language, .case-metric-label { color: var(--color-red-text); font: 700 .68rem/1.4 var(--font-mono); letter-spacing: .09em; text-transform: uppercase; }
 .case-kicker { margin: 0 0 1rem; }
 .case-title { margin: 0; font: 700 clamp(2.1rem, 5vw, 4.2rem)/.95 var(--font-sans); letter-spacing: -.065em; }
@@ -476,11 +476,9 @@ li strong { color: var(--color-ink); font-weight: 700; }
                 
                 <p class="experience-skills"><strong>Skills:</strong> Product Strategy, Growth, Monetization, Go-to-Market, Product-Market Fit, Retention, UX, B2C, B2B, AdTech, MarTech, SEO, Streaming, Squads, Product Analytics, Scrum, Kanban</p>
             </div>
-        </article>
 
-<section class="big-game-case" aria-labelledby="big-game-title">
-    <p class="case-kicker">Globo · Selected Product Case</p>
-    <h3 class="case-title" id="big-game-title">Big Game BBB</h3>
+<section class="big-game-case" aria-label="Selected Product Case: Big Game BBB">
+    <p class="case-kicker">SELECTED PRODUCT CASE · BIG GAME BBB</p>
     <p class="case-deck">Uma experiência de fantasy game que transformou o maior reality show do Brasil em um jogo de engajamento.</p>
     <div class="case-copy">
         <div class="case-copy-column" lang="pt-BR">
@@ -522,6 +520,7 @@ li strong { color: var(--color-ink); font-weight: 700; }
         </button>
     </div>
 </section>
+        </article>
 
 <article class="experience-item">
             <div class="experience-heading">
