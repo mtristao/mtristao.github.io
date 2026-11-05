@@ -277,7 +277,51 @@ li strong { color: var(--color-ink); font-weight: 700; }
     section { break-inside: auto; }
     .year-section { break-inside: avoid; }
 }
-    </style>
+    
+/* Big Game BBB selected case */
+.big-game-case { margin: 1.25rem 0 3rem; padding: clamp(1.5rem, 3vw, 2.5rem) 0 3rem; border-top: 1px solid var(--color-gray); border-bottom: 1px solid var(--color-ink); }
+.case-kicker, .case-language, .case-metric-label { color: var(--color-red-text); font: 700 .68rem/1.4 var(--font-mono); letter-spacing: .09em; text-transform: uppercase; }
+.case-kicker { margin: 0 0 1rem; }
+.case-title { margin: 0; font: 700 clamp(2.1rem, 5vw, 4.2rem)/.95 var(--font-sans); letter-spacing: -.065em; }
+.case-deck { max-width: 54ch; margin: .85rem 0 2.25rem; color: var(--color-muted); font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.45; }
+.case-copy { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 4rem); padding: 1.5rem 0 2.25rem; border-top: 1px solid var(--color-gray); }
+.case-copy-column { min-width: 0; }
+.case-copy-column + .case-copy-column { padding-left: clamp(1.25rem, 3vw, 3rem); border-left: 1px solid var(--color-gray); }
+.case-language { margin: 0 0 .9rem; }
+.case-copy h4 { margin: 1.35rem 0 .45rem; font: 700 .75rem/1.4 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; }
+.case-copy h4:first-of-type { margin-top: 0; }
+.case-copy p { margin: 0 0 .9rem; font-size: .92rem; line-height: 1.65; }
+.case-metrics { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; padding: 1.5rem 0 2rem; border-top: 1px solid var(--color-gray); border-bottom: 1px solid var(--color-gray); }
+.case-metric { min-width: 0; }
+.case-metric-value { display: block; color: var(--color-red-text); font: 700 clamp(1.55rem, 3vw, 2.6rem)/1 var(--font-sans); letter-spacing: -.06em; }
+.case-metric-label { display: block; margin-top: .55rem; font-size: .62rem; }
+.case-media { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, .72fr); gap: clamp(1.25rem, 3vw, 3rem); align-items: stretch; padding-top: 2rem; }
+.case-media-note { max-width: 42ch; }
+.case-media-note h4 { margin: 0 0 .5rem; font: 700 .75rem/1.4 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; }
+.case-media-note p { margin: 0; color: var(--color-muted); font-size: .88rem; }
+.case-video-trigger { position: relative; display: flex; min-height: 15rem; align-items: flex-end; justify-content: space-between; gap: 1rem; padding: 1.5rem; border: 0; background: #171717; color: #fff; font: inherit; text-align: left; cursor: pointer; }
+.case-video-trigger::before { content: ""; position: absolute; inset: 1rem; border: 1px solid rgba(255,255,255,.22); pointer-events: none; }
+.case-video-trigger:hover { background: #292929; }
+.case-video-trigger:focus-visible { outline: 2px solid var(--color-red-text); outline-offset: 4px; }
+.case-video-title { position: relative; display: block; max-width: 16ch; font-size: clamp(1.35rem, 2.4vw, 2rem); font-weight: 700; line-height: 1.05; letter-spacing: -.04em; }
+.case-video-meta { position: relative; display: block; margin-top: .7rem; color: #c7c7c7; font: 700 .65rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.case-play { position: relative; display: grid; flex: 0 0 3.25rem; width: 3.25rem; height: 3.25rem; place-items: center; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; font-size: 1.1rem; }
+.case-video-dialog { width: min(92vw, 1100px); max-width: 92vw; padding: 0; border: 0; background: #111; color: #fff; }
+.case-video-dialog::backdrop { background: rgba(0,0,0,.82); }
+.case-dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 1rem; }
+.case-dialog-header p { margin: 0; color: #fff; font: 700 .7rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.case-dialog-close { border: 1px solid #777; padding: .4rem .7rem; background: transparent; color: #fff; font: inherit; cursor: pointer; }
+.case-video { display: block; width: 100%; max-height: 78vh; background: #000; }
+@media (max-width: 760px) {
+    .case-copy { grid-template-columns: 1fr; gap: 1.5rem; }
+    .case-copy-column + .case-copy-column { padding: 1.5rem 0 0; border-left: 0; border-top: 1px solid var(--color-gray); }
+    .case-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.4rem; }
+    .case-metric:last-child { grid-column: 1 / -1; }
+    .case-media { grid-template-columns: 1fr; }
+    .case-video-trigger { min-height: 13rem; }
+}
+
+</style>
 </head>
 
 <body>
@@ -414,7 +458,7 @@ li strong { color: var(--color-ink); font-weight: 700; }
                 <p class="experience-label">RESPONSIBILITIES</p>
                 <ul>
                     <li>Product strategy and execution focused on audience growth, monetization and innovation across digital and streaming platforms</li>
-                    <li>Go-to-market for Big Game BBB (B2C fantasy game), launching the 2022 and 2023 editions</li>
+                    <li>Product strategy and go-to-market for Big Game BBB, a B2C fantasy game launched for BBB22; contributed to planning the next edition, which was not launched</li>
                     <li>Monetization through AdTech (paid views and banners) and Video Shopping, with engagement supported by MarTech and SEO</li>
                     <li>UX: prototypes, usability testing and user feedback to validate MVPs and product-market fit</li>
                     <li>Scrum and Kanban squad management; Product Analytics for audience, engagement and revenue</li>
@@ -433,6 +477,52 @@ li strong { color: var(--color-ink); font-weight: 700; }
                 <p class="experience-skills"><strong>Skills:</strong> Product Strategy, Growth, Monetization, Go-to-Market, Product-Market Fit, Retention, UX, B2C, B2B, AdTech, MarTech, SEO, Streaming, Squads, Product Analytics, Scrum, Kanban</p>
             </div>
         </article>
+
+<section class="big-game-case" aria-labelledby="big-game-title">
+    <p class="case-kicker">Globo · Selected Product Case</p>
+    <h3 class="case-title" id="big-game-title">Big Game BBB</h3>
+    <p class="case-deck">Uma experiência de fantasy game que transformou o maior reality show do Brasil em um jogo de engajamento.</p>
+    <div class="case-copy">
+        <div class="case-copy-column" lang="pt-BR">
+            <p class="case-language">PT-BR</p>
+            <h4>O desafio</h4>
+            <p>O Big Game BBB nasceu como uma prova de conceito para aumentar o engajamento dos fãs nos períodos de menor relevância do programa na TV e estimular o consumo de conteúdo no GShow.</p>
+            <p>A hipótese se apoiava no comportamento dos jogadores de fantasy games: dados do Cartola indicavam que eles consumiam de duas a três vezes mais conteúdo do que os demais usuários.</p>
+            <h4>Minha atuação</h4>
+            <p>Acompanhei o produto de ponta a ponta, da concepção à evolução durante a temporada. Atuei como consultor e coordenador, orquestrando equipes multidisciplinares e estimulando a autonomia de designers, desenvolvedores, cientistas de dados e outros profissionais envolvidos.</p>
+            <p>Minha experiência em desenvolvimento de software, métricas de consumo e engajamento, comportamento do usuário e fantasy games ajudou a orientar decisões e conectar as diferentes frentes de trabalho.</p>
+            <p>Também liderei o alinhamento com equipes de plataforma, aproveitando soluções existentes, como login, enquetes e votação, para acelerar a entrega. A gestão de stakeholders foi fundamental para alinhar expectativas, prioridades e entregas a cada release.</p>
+        </div>
+        <div class="case-copy-column" lang="en">
+            <p class="case-language">EN</p>
+            <h4>The challenge</h4>
+            <p>Big Game BBB started as a proof of concept to increase fan engagement during periods when the show had lower relevance on TV and encourage greater content consumption on GShow.</p>
+            <p>The hypothesis was based on fantasy game user behavior: Cartola data indicated that fantasy players consumed two to three times more content than other users.</p>
+            <h4>My role</h4>
+            <p>I followed the product end to end, from its conception to its evolution throughout the season. Acting as a product advisor and coordinator, I orchestrated cross-functional teams while encouraging designers, developers, data scientists and other contributors to work autonomously.</p>
+            <p>My experience in software development, consumption and engagement metrics, user behavior and fantasy games helped guide decisions and connect different workstreams.</p>
+            <p>I also coordinated alignment with platform teams, leveraging existing capabilities such as login, polls and voting to accelerate delivery. Stakeholder management was essential to align expectations, priorities and deliverables across releases.</p>
+        </div>
+    </div>
+    <div class="case-metrics" aria-label="Big Game BBB results">
+        <div class="case-metric"><span class="case-metric-value">300K+</span><span class="case-metric-label">Registered users</span></div>
+        <div class="case-metric"><span class="case-metric-value">12M+</span><span class="case-metric-label">Predictions · season</span></div>
+        <div class="case-metric"><span class="case-metric-value">1M+</span><span class="case-metric-label">Predictions · round</span></div>
+        <div class="case-metric"><span class="case-metric-value">103K</span><span class="case-metric-label">Groups · avg. per round</span></div>
+        <div class="case-metric"><span class="case-metric-value">30%</span><span class="case-metric-label">Retained to finale</span></div>
+    </div>
+    <div class="case-media">
+        <div class="case-media-note">
+            <h4>Videocase · BBB22</h4>
+            <p>Assista à experiência do produto em funcionamento. O vídeo abre em uma janela ampliada, sem sair da página.</p>
+        </div>
+        <button class="case-video-trigger" type="button" data-open-bbb-video aria-haspopup="dialog" aria-controls="bbb-video-dialog">
+            <span><span class="case-video-title">Big Game BBB</span><span class="case-video-meta">Videocase · 03:33 · Full HD</span></span>
+            <span class="case-play" aria-hidden="true">▶</span>
+        </button>
+    </div>
+</section>
+
 <article class="experience-item">
             <div class="experience-heading">
                 <h3>Group Product Manager | GloboEsporte and Cartola | Growth, Monetization | B2C</h3>
@@ -737,5 +827,32 @@ li strong { color: var(--color-ink); font-weight: 700; }
     </section>
     </main>
     </div>
+
+<dialog class="case-video-dialog" id="bbb-video-dialog" aria-label="Big Game BBB videocase">
+    <div class="case-dialog-header">
+        <p>Big Game BBB · Videocase</p>
+        <button class="case-dialog-close" type="button" data-close-bbb-video aria-label="Close video">Close ✕</button>
+    </div>
+    <video class="case-video" id="bbb-video" controls preload="none">
+        <source src="media/big-game-bbb.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+</dialog>
+<script>
+(() => {
+    const dialog = document.getElementById('bbb-video-dialog');
+    const video = document.getElementById('bbb-video');
+    const openButton = document.querySelector('[data-open-bbb-video]');
+    const closeButton = document.querySelector('[data-close-bbb-video]');
+    if (!dialog || !video || !openButton || !closeButton) return;
+    openButton.addEventListener('click', () => { dialog.showModal(); video.play().catch(() => {}); });
+    const closeDialog = () => { video.pause(); video.currentTime = 0; dialog.close(); };
+    closeButton.addEventListener('click', closeDialog);
+    dialog.addEventListener('click', event => { if (event.target === dialog) closeDialog(); });
+    dialog.addEventListener('close', () => video.pause());
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && dialog.open) closeDialog(); });
+})();
+</script>
+
 </body>
 </html>
