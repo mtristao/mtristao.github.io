@@ -382,6 +382,13 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
 @media(max-width:760px){.site-nav{min-height:4.25rem;overflow:visible;white-space:normal}.mobile-menu-toggle{display:block;cursor:pointer}.site-nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:.5rem var(--page-gutter) 1rem;background:#fff;border-bottom:1px solid var(--color-gray)}.site-nav.is-open .site-nav-links{display:flex}.site-nav-links a{padding:.85rem 0;border-bottom:1px solid var(--color-gray);font-size:.75rem}.site-nav-links a[aria-current="location"]::before{display:none}.hero{padding-top:5rem}.page-title{font-size:clamp(3.5rem,17vw,6.8rem)}.section-heading-row{align-items:flex-start;flex-direction:column;gap:1rem}.language-switch{align-self:flex-end}.selected-work-intro{margin-bottom:2.5rem}.selected-work-entry{padding:2rem 0 3rem}.selected-work-meta{flex-wrap:wrap;gap:.65rem}.selected-work-meta a{width:100%;margin:0}.intro-columns{grid-template-columns:1fr}.intro-column + .intro-column{border-left:0;border-top:1px solid var(--color-gray);padding:2rem 0 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+
+/* Advertiser information footer */
+.advertiser-footer { width:100%; max-width:var(--content-width); margin:0 auto; padding:2.5rem 0 1rem; border-top:1px solid var(--color-ink); }
+.advertiser-footer h2 { margin:0 0 1rem; font:700 .75rem/1.4 var(--font-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--color-red-text); }
+.advertiser-footer p { margin:.35rem 0; color:var(--color-muted); font-size:.88rem; line-height:1.6; }
+.advertiser-footer a { text-decoration:underline; text-decoration-color:var(--color-red); text-underline-offset:3px; }
+.advertiser-footer .footer-legal { margin-top:1rem; padding-top:1rem; border-top:1px solid var(--color-gray); font-size:.75rem; }
 </style>
 </head>
 
@@ -1051,6 +1058,16 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
         </div>
     </section>
     </main>
+
+<footer class="advertiser-footer" id="advertiser-information" aria-labelledby="advertiser-information-title">
+  <h2 id="advertiser-information-title">Advertiser Information</h2>
+  <p><strong>Marcio Tristao</strong></p>
+  <p>Rio de Janeiro – RJ, Brasil</p>
+  <p>Email: <a href="mailto:mtristao@gmail.com">mtristao@gmail.com</a></p>
+  <p>Phone: <a href="tel:+5521999418453">+55 21 99941-8453</a></p>
+  <p>WhatsApp: <a href="https://wa.me/5521999418453" target="_blank" rel="noopener noreferrer">+55 21 99941-8453</a></p>
+  <p class="footer-legal"><a href="privacy.html">Privacy Policy</a></p>
+</footer>
     </div>
 
 <dialog class="case-video-dialog" id="bbb-video-dialog" aria-label="Big Game BBB videocase">
