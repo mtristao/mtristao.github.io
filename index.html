@@ -321,6 +321,42 @@ li strong { color: var(--color-ink); font-weight: 700; }
     .case-video-trigger { min-height: 13rem; }
 }
 
+
+/* Better Collective AI Sports Hub case */
+.ai-hub-case { margin: 2rem 0 0; padding: 1.5rem 0 0; border-top: 1px solid var(--color-ink); }
+.ai-hub-case .case-kicker { margin-bottom: .8rem; }
+.ai-hub-case .case-title { max-width: 18ch; }
+.ai-hub-case .case-deck { max-width: 70ch; }
+.ai-hub-case .case-copy { margin-top: 1.5rem; }
+.ai-hub-case .case-copy h4 { margin-top: 1.1rem; }
+.ai-hub-case .case-copy ul { margin: .4rem 0 1.2rem; padding-left: 1rem; }
+.ai-hub-case .case-copy li { font-size: .88rem; line-height: 1.55; margin: .4rem 0; }
+.ai-hub-case .case-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.75rem; margin:1.5rem 0 2rem; }
+.ai-hub-case .case-flow-step { min-width:0; padding:1rem; border-top:2px solid var(--color-red); background:#f7f7f7; }
+.ai-hub-case .case-flow-step strong { display:block; font:700 .72rem/1.4 var(--font-mono); text-transform:uppercase; }
+.ai-hub-case .case-flow-step span { display:block; margin-top:.5rem; color:var(--color-muted); font-size:.82rem; line-height:1.45; }
+.ai-hub-case .case-metrics { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.ai-hub-case .case-metric-value { font-size:clamp(1.2rem,2.5vw,2rem); }
+.ai-hub-case .case-note { margin:1rem 0 0; color:var(--color-muted); font-size:.78rem; }
+@media(max-width:760px) {
+ .ai-hub-case .case-flow { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .ai-hub-case .case-copy { grid-template-columns:1fr; }
+ .ai-hub-case .case-copy-column + .case-copy-column { padding:1.5rem 0 0; border-left:0; border-top:1px solid var(--color-gray); }
+ .ai-hub-case .case-metrics { grid-template-columns:1fr 1fr; }
+}
+
+
+/* Case study original visual assets */
+.ai-hub-case .case-visuals { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(240px,1fr); gap:1.25rem; align-items:start; margin:2rem 0; }
+.ai-hub-case .case-visual { margin:0; min-width:0; }
+.ai-hub-case .case-visual img { display:block; width:100%; height:auto; border:1px solid var(--color-gray); }
+.ai-hub-case .case-visual figcaption { margin-top:.5rem; color:var(--color-muted); font-size:.72rem; line-height:1.45; }
+.ai-hub-case .case-visual-poc { max-width:780px; margin:1.25rem auto 1.75rem; }
+@media(max-width:760px) {
+ .ai-hub-case .case-visuals { grid-template-columns:1fr; }
+ .ai-hub-case .case-visual-onboarding { max-width:560px; }
+}
+
 </style>
 </head>
 
@@ -444,6 +480,161 @@ li strong { color: var(--color-ink); font-weight: 700; }
                 </ul>
                 
                 <p class="experience-skills"><strong>Skills:</strong> Portfolio Management, Growth, Monetization, Go-to-Market, Product-Market Fit, Retention, Conversion, AI, MarTech, SEO, B2C, B2B, PMI, Stakeholder Management, Product Analytics, Scrum, Kanban</p>
+                <section class="ai-hub-case" aria-label="Selected Product Case: AI-powered Sports Hub">
+                    <p class="case-kicker">SELECTED PRODUCT CASE · BETTER COLLECTIVE</p>
+                    <h2 class="case-title">Hub Esportivo para escalar e personalizar conteúdo com IA</h2>
+                    <p class="case-deck">Uma estratégia para conectar conteúdo esportivo local e internacional, ampliar a distribuição com IA e construir uma experiência personalizada para torcedores na América Latina.</p>
+                    <div class="case-flow" aria-label="Product strategy">
+                        <div class="case-flow-step"><strong>01 · Scale</strong><span>IA para traduzir e distribuir conteúdo internacional em escala.</span></div>
+                        <div class="case-flow-step"><strong>02 · Differentiate</strong><span>Marcas locais, especialização editorial e profundidade de cobertura.</span></div>
+                        <div class="case-flow-step"><strong>03 · Personalize</strong><span>Preferências, comportamento e curadoria para organizar a descoberta.</span></div>
+                        <div class="case-flow-step"><strong>04 · Monetize</strong><span>Mais inventário de conteúdo e oportunidades comerciais.</span></div>
+                    </div>
+                    <div class="case-visuals" aria-label="Original Sports Hub product concept">
+                        <figure class="case-visual case-visual-wide">
+                            <img src="media/hub-feed-desktop.jpg" alt="Original desktop prototype of the personalized sports hub feed" loading="lazy">
+                            <figcaption>Experiência desktop do Hub Esportivo · Sports Hub desktop experience</figcaption>
+                        </figure>
+                        <figure class="case-visual case-visual-onboarding">
+                            <img src="media/hub-onboarding.jpg" alt="Original onboarding prototype for selecting sports preferences" loading="lazy">
+                            <figcaption>Onboarding e seleção de preferências · Onboarding and preference selection</figcaption>
+                        </figure>
+                    </div>
+                    <div class="case-copy">
+                        <div class="case-copy-column" lang="pt-BR">
+                            <p class="case-language">PT-BR</p>
+                            <h4>Contexto e oportunidade</h4>
+                            <p>A Better Collective reunia 25 marcas esportivas independentes na América Latina, com conhecimento editorial e presença local em diferentes mercados.</p>
+                            <p>Ao mesmo tempo, mais de 2 milhões de artigos produzidos em outros mercados não geravam retorno relevante na região. Havia uma oportunidade de conectar esse conteúdo ao público latino-americano, ampliar sua distribuição e fortalecer o ecossistema de marcas locais.</p>
+                            <p>A proposta também buscava aumentar a visibilidade dessas marcas e oferecer uma cobertura esportiva mais variada e aprofundada, apoiada por equipes especializadas, com acesso a atletas, técnicos, clubes e patrocinadores locais.</p>
+                            <h4>Visão de produto</h4>
+                            <p>Criar um hub esportivo personalizado, capaz de reunir conteúdos locais e internacionais em uma experiência organizada pelos interesses de cada usuário.</p>
+                            <p>A experiência combinaria preferências declaradas, comportamento de navegação e curadoria editorial para conectar torcedores a esportes, competições, times e diferentes perspectivas sobre o universo esportivo.</p>
+                            <h4>Estratégia: Scale + Differentiation</h4>
+                            <p><strong>Scale — Escala com IA.</strong> Reaproveitar a capacidade de tradução por IA para distribuir conteúdo internacional em diferentes idiomas e mercados da América Latina, ampliando o catálogo disponível e o potencial de alcance.</p>
+                            <p><strong>Differentiation — Diferenciação editorial.</strong> Fortalecer as marcas locais, sua especialização editorial e a profundidade da cobertura esportiva. O objetivo era construir a percepção de um ecossistema com mais variedade, conhecimento e relevância local.</p>
+                            <h4>Principais decisões de produto</h4>
+                            <ul>
+                                <li><strong>Personalização:</strong> permitir que usuários selecionassem esportes, times, competições e atletas de interesse.</li>
+                                <li><strong>Descoberta:</strong> combinar preferências declaradas, comportamento e curadoria editorial para organizar o feed.</li>
+                                <li><strong>Experiência inicial:</strong> para novos usuários sem histórico, priorizar conteúdos mais acessados nas últimas 24 a 48 horas.</li>
+                                <li><strong>Conteúdo local:</strong> apresentar uma chamada ou prévia no hub e direcionar o usuário para a matéria original, publicada na marca local.</li>
+                                <li><strong>Conteúdo internacional:</strong> traduzir e publicar o artigo em uma nova URL do hub, permitindo seu consumo integral na plataforma.</li>
+                                <li><strong>Distribuição e SEO:</strong> estruturar a publicação e a conexão entre os conteúdos locais e internacionais considerando os impactos sobre descoberta orgânica e presença das marcas.</li>
+                                <li><strong>Monetização:</strong> ampliar o inventário de conteúdo e as oportunidades comerciais, incluindo publicidade e ofertas afiliadas.</li>
+                            </ul>
+                            <h4>Tecnologia e viabilidade com IA</h4>
+                            <p>Um dos desafios era desenvolver uma solução robusta e escalável para traduzir grandes volumes de conteúdo, considerando diferentes idiomas, origens e destinos.</p>
+                            <p>A capacidade de tradução por IA já estava em operação em outras frentes. Trabalhei com a liderança de Engenharia de IA para discutir a viabilidade de reaproveitar essa capacidade e conectá-la à experiência proposta para o hub.</p>
+                            <p>A especificação técnica completa não foi aprofundada nessa etapa. A decisão foi priorizar um teste mais simples e econômico antes de assumir o investimento de desenvolvimento de uma plataforma mais complexa.</p>
+                            <h4>Validação Lean</h4>
+                            <p>A abordagem priorizou aprendizado e aquisição de dados antes de um investimento maior em tecnologia. A primeira entrega concentrou-se em três componentes:</p>
+                            <ol>
+                                <li><strong>Landing page:</strong> experiência para apresentar a proposta e captar usuários.</li>
+                                <li><strong>Armazenamento de dados:</strong> estrutura para registrar as informações declaradas no cadastro.</li>
+                                <li><strong>Dashboard:</strong> acompanhamento dos dados e análise de indicadores para identificar oportunidades e orientar decisões.</li>
+                            </ol>
+                            <p>A experiência de cadastro da POC Torcidômetro ilustra essa abordagem: uma landing page com seleção do time, dados pessoais, informações de contato e perguntas sobre hábitos e perfil de apostas. Após o cadastro, o usuário recebia a confirmação e um convite para continuar o relacionamento pelo WhatsApp.</p>
+                            <figure class="case-visual case-visual-poc">
+                                <img src="media/torcidometro-poc.jpg" alt="Landing page e formulário da POC Torcidômetro, com seleção de time e campos de cadastro" loading="lazy">
+                                <figcaption>POC Torcidômetro: uma landing page e um formulário simples para testar a proposta.</figcaption>
+                            </figure>
+                            <h4>Indicadores de sucesso</h4>
+                            <p><strong>Aquisição e dados</strong></p>
+                            <ul>
+                                <li>Número de usuários cadastrados.</li>
+                                <li>Usuários com até três informações de preferência declaradas.</li>
+                                <li>Usuários com mais de três informações de preferência declaradas.</li>
+                            </ul>
+                            <p><strong>Engajamento</strong></p>
+                            <ul>
+                                <li>Crescimento dos cliques nas seções.</li>
+                                <li>Crescimento de pageviews e consumo por seção.</li>
+                            </ul>
+                            <p><strong>Monetização</strong></p>
+                            <ul>
+                                <li>Aumento do inventário disponível para o time comercial.</li>
+                                <li>Aumento do volume de impressões publicitárias entregues.</li>
+                            </ul>
+                            <h4>Minha atuação</h4>
+                            <p>Concebi e estruturei a visão do produto, transformando a oportunidade de negócio em uma proposta de experiência e estratégia para a América Latina.</p>
+                            <p>Trabalhei com dois Product Designers na construção do conceito e do protótipo. Também conduzi as discussões de viabilidade com a liderança técnica de IA, conectando a oportunidade de produto às capacidades tecnológicas existentes.</p>
+                            <p>Apresentei a proposta à liderança sênior da região e ajudei a definir uma abordagem de validação progressiva: começar pela aquisição e análise de dados, reduzir o custo inicial de experimentação e gerar evidências antes de avançar para o desenvolvimento completo.</p>
+                            <h4>Aprendizado e desdobramento</h4>
+                            <p>O trabalho também contribuiu para amadurecer a hipótese de um programa de Loyalty conectado ao ecossistema esportivo.</p>
+                            <p>Essa frente foi validada separadamente, por meio de uma POC baseada em grupos de WhatsApp, que alcançou 60 mil usuários em três meses.</p>
+                            <p class="case-note">Esse resultado pertence à iniciativa de Loyalty, não ao Hub Esportivo.</p>
+                            <p>A experiência reforçou o valor de testar hipóteses com estruturas leves antes de ampliar o investimento em produto e tecnologia.</p>
+                        </div>
+                        <div class="case-copy-column" lang="en">
+                            <p class="case-language">ENGLISH</p>
+                            <h4>Context and opportunity</h4>
+                            <p>Better Collective brought together 25 independent sports media brands across Latin America, combining local market presence with specialized editorial knowledge.</p>
+                            <p>At the same time, more than 2 million articles produced in other markets were not generating meaningful returns in the region. This represented an opportunity to connect that content with Latin American audiences, expand its distribution, and strengthen the ecosystem of local brands.</p>
+                            <p>The initiative also aimed to increase the visibility of local brands and provide broader, deeper sports coverage, supported by specialized editorial teams with access to athletes, coaches, clubs, and local sponsors.</p>
+                            <h4>Product vision</h4>
+                            <p>Create a personalized sports hub that brings together local and international content in an experience organized around each user's interests.</p>
+                            <p>The experience would combine declared preferences, browsing behavior, and editorial curation to connect fans with sports, competitions, teams, and different perspectives across the sports ecosystem.</p>
+                            <h4>Strategy: Scale + Differentiation</h4>
+                            <p><strong>Scale — AI-powered distribution.</strong> Leverage existing AI translation capabilities to distribute international content across different languages and Latin American markets, expanding the available content catalog and its potential reach.</p>
+                            <p><strong>Differentiation — Editorial depth.</strong> Strengthen local brands, their editorial specialization, and the depth of sports coverage. The goal was to build the perception of a broader ecosystem offering greater variety, expertise, and local relevance.</p>
+                            <h4>Key product decisions</h4>
+                            <ul>
+                                <li><strong>Personalization:</strong> allow users to select their preferred sports, teams, competitions, and athletes.</li>
+                                <li><strong>Discovery:</strong> combine declared preferences, behavioral signals, and editorial curation to organize the feed.</li>
+                                <li><strong>First-time experience:</strong> for users without browsing history, prioritize the most accessed content from the previous 24 to 48 hours.</li>
+                                <li><strong>Local content:</strong> display a headline or preview in the hub and direct users to the original article published on the local brand's website.</li>
+                                <li><strong>International content:</strong> translate and publish articles under new hub URLs, allowing users to consume the full content within the platform.</li>
+                                <li><strong>Distribution and SEO:</strong> structure content publishing and connections between local and international content, considering their impact on organic discovery and brand presence.</li>
+                                <li><strong>Monetization:</strong> expand the content inventory and commercial opportunities, including advertising and affiliate offers.</li>
+                            </ul>
+                            <h4>Technology and AI feasibility</h4>
+                            <p>One of the main challenges was developing a robust, scalable solution to translate large volumes of content across multiple languages, origins, and destinations.</p>
+                            <p>AI translation capabilities were already operating in other initiatives. I worked with AI Engineering leadership to explore the feasibility of reusing those capabilities and connecting them to the proposed hub experience.</p>
+                            <p>The full technical specification was not developed at this stage. The decision was to prioritize a simpler, lower-cost test before committing to the investment required for a more complex platform.</p>
+                            <h4>Lean validation</h4>
+                            <p>The approach prioritized learning and data acquisition before making a larger technology investment. The initial delivery focused on three components:</p>
+                            <ol>
+                                <li><strong>Landing page:</strong> an experience to introduce the proposition and acquire users.</li>
+                                <li><strong>Data storage:</strong> a structure to capture and store information submitted during registration.</li>
+                                <li><strong>Dashboard:</strong> a way to monitor data and analyze indicators to identify opportunities and inform decisions.</li>
+                            </ol>
+                            <p>The Torcidômetro POC registration experience illustrates this approach: a landing page capturing team preferences, personal details, contact information, and answers about betting habits and profile. After registration, users received a confirmation and an invitation to continue the relationship through WhatsApp.</p>
+                            <h4>Success metrics</h4>
+                            <p><strong>Acquisition and data</strong></p>
+                            <ul>
+                                <li>Number of registered users.</li>
+                                <li>Users with up to three declared preference data points.</li>
+                                <li>Users with more than three declared preference data points.</li>
+                            </ul>
+                            <p><strong>Engagement</strong></p>
+                            <ul>
+                                <li>Growth in clicks across sections.</li>
+                                <li>Growth in pageviews and content consumption by section.</li>
+                            </ul>
+                            <p><strong>Monetization</strong></p>
+                            <ul>
+                                <li>Increase in inventory available to the commercial team.</li>
+                                <li>Increase in the volume of advertising impressions delivered.</li>
+                            </ul>
+                            <h4>My contribution</h4>
+                            <p>I conceived and structured the product vision, translating the business opportunity into a product experience and strategy for Latin America.</p>
+                            <p>I worked with two Product Designers to develop the concept and prototype. I also led feasibility discussions with AI technical leadership, connecting the product opportunity with existing technological capabilities.</p>
+                            <p>I presented the proposal to regional senior leadership and helped define a progressive validation approach: start with acquisition and data analysis, reduce initial experimentation costs, and generate evidence before moving forward with full-scale development.</p>
+                            <h4>Learning and next steps</h4>
+                            <p>The work also helped shape the hypothesis for a Loyalty program connected to the sports ecosystem.</p>
+                            <p>That initiative was validated separately through a WhatsApp group-based POC, which reached 60,000 users in three months.</p>
+                            <p class="case-note">This result belongs to the Loyalty initiative, not the Sports Hub.</p>
+                            <p>The experience reinforced the value of testing hypotheses through lightweight experiments before scaling investment in product and technology.</p>
+                        </div>
+                    </div>
+                    <div class="case-metrics" aria-label="Sports Hub strategic context">
+                        <div class="case-metric"><span class="case-metric-value">25</span><span class="case-metric-label">Marcas esportivas locais / Local sports brands</span></div>
+                        <div class="case-metric"><span class="case-metric-value">2M+</span><span class="case-metric-label">Artigos internacionais / International articles</span></div>
+                        <div class="case-metric"><span class="case-metric-value">2</span><span class="case-metric-label">Product Designers no conceito / on concept</span></div>
+                    </div>
+                    <p class="case-note">Torcidômetro is shown as evidence of the lean registration approach. Its user results are not attributed to the Sports Hub.</p>
+                </section>
             </div>
         </article>
         <div class="experience-company">
