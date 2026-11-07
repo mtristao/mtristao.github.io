@@ -83,6 +83,40 @@ jobs:
           await browser.close();
           NODE
 
+      - name: Test navigation and video dialog interactions
+        run: |
+          node --input-type=module <<'NODE'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch({ headless: true });
+          const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+          const failures = [];
+          page.on('pageerror', error => failures.push(error.message));
+          await page.goto('http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
+
+          const menu = page.locator('.mobile-menu-toggle');
+          const nav = page.locator('.site-nav');
+          const links = page.locator('.site-nav-links a');
+          if (await menu.isVisible()) {
+            if (await menu.getAttribute('aria-expanded') !== 'false') throw new Error('Mobile menu should start collapsed');
+            await menu.click();
+            if (await menu.getAttribute('aria-expanded') !== 'true') throw new Error('Mobile menu did not set aria-expanded=true');
+            if (!await nav.evaluate(el => el.classList.contains('is-open'))) throw new Error('Mobile menu did not open');
+            await links.filter({ hasText: '02 Experience' }).click();
+            if (await menu.getAttribute('aria-expanded') !== 'false') throw new Error('Selecting a navigation link did not close the menu');
+            await menu.click();
+            await page.keyboard.press('Escape');
+            if (await menu.getAttribute('aria-expanded') !== 'false') throw new Error('Escape did not close the mobile menu');
+          }
+
+          await page.locator('[data-open-bbb-video]').click();
+          const dialog = page.locator('#bbb-video-dialog');
+          if (!await dialog.evaluate(el => el.open)) throw new Error('Video dialog did not open');
+          await page.locator('[data-close-bbb-video]').click();
+          if (await dialog.evaluate(el => el.open)) throw new Error('Video dialog did not close');
+          if (failures.length) throw new Error(`JavaScript errors: ${failures.join('; ')}`);
+          await browser.close();
+          NODE
+
       - name: Run Lighthouse desktop
         run: |
           npx lighthouse http://127.0.0.1:4173/ --preset=desktop --chrome-flags="--headless --no-sandbox" --output=html --output=json --output-path=./lighthouse-desktop
