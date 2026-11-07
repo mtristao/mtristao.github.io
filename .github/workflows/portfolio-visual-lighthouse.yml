@@ -1,4 +1,5 @@
 # Audits the pull request head without deploying or changing GitHub Pages.
+# Triggered on PR updates and manual dispatch; no deployment steps.
 name: Portfolio visual and Lighthouse audit
 
 on:
