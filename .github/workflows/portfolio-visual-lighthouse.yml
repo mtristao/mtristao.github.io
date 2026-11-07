@@ -1,3 +1,4 @@
+# Audits the pull request head without deploying or changing GitHub Pages.
 name: Portfolio visual and Lighthouse audit
 
 on:
