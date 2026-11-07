@@ -1,0 +1,79 @@
+name: Portfolio visual and Lighthouse audit
+
+on:
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install audit tools
+        run: |
+          npm install --no-save lighthouse http-server playwright
+          npx playwright install --with-deps chromium
+
+      - name: Serve portfolio
+        run: |
+          npx http-server . -p 4173 -c-1 > /tmp/portfolio-server.log 2>&1 &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/portfolio-server.log
+          exit 1
+
+      - name: Capture desktop and mobile screenshots
+        run: |
+          node --input-type=module <<'NODE'
+          import { chromium } from 'playwright';
+          const browser = await chromium.launch({ headless: true });
+          for (const [name, viewport] of [
+            ['desktop', { width: 1440, height: 1000 }],
+            ['mobile', { width: 390, height: 844 }]
+          ]) {
+            const page = await browser.newPage({ viewport, deviceScaleFactor: 1 });
+            await page.goto('http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
+            await page.screenshot({ path: `portfolio-${name}.png`, fullPage: true });
+            await page.close();
+          }
+          await browser.close();
+          NODE
+
+      - name: Run Lighthouse desktop
+        run: |
+          npx lighthouse http://127.0.0.1:4173/ --preset=desktop --chrome-flags="--headless --no-sandbox" --output=html --output=json --output-path=./lighthouse-desktop
+
+      - name: Run Lighthouse mobile
+        run: |
+          npx lighthouse http://127.0.0.1:4173/ --chrome-flags="--headless --no-sandbox" --output=html --output=json --output-path=./lighthouse-mobile
+
+      - name: Upload audit reports and screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-visual-lighthouse-audit
+          path: |
+            portfolio-desktop.png
+            portfolio-mobile.png
+            lighthouse-desktop.report.html
+            lighthouse-desktop.report.json
+            lighthouse-mobile.report.html
+            lighthouse-mobile.report.json
+          if-no-files-found: error
+          retention-days: 14
