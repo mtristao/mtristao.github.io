@@ -11,16 +11,16 @@ permissions:
 
 jobs:
   audit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Checkout PR branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
 
@@ -65,7 +65,7 @@ jobs:
           npx lighthouse http://127.0.0.1:4173/ --chrome-flags="--headless --no-sandbox" --output=html --output=json --output-path=./lighthouse-mobile
 
       - name: Upload audit reports and screenshots
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: portfolio-visual-lighthouse-audit
           path: |
