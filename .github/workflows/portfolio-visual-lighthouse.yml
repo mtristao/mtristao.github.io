@@ -53,6 +53,28 @@ jobs:
             const pageErrors = [];
             page.on('pageerror', error => pageErrors.push(error.message));
             await page.goto('http://127.0.0.1:4173/', { waitUntil: 'networkidle' });
+            const layout = await page.evaluate(async () => {
+              const images = [...document.images];
+              for (const img of images) img.loading = 'eager';
+              const imageResults = await Promise.all(images.map(async img => {
+                try {
+                  await img.decode();
+                  return { src: img.currentSrc || img.src, loaded: img.naturalWidth > 0 };
+                } catch {
+                  return { src: img.currentSrc || img.src, loaded: false };
+                }
+              }));
+              return {
+                viewportWidth: window.innerWidth,
+                documentWidth: document.documentElement.scrollWidth,
+                images: imageResults
+              };
+            });
+            if (layout.documentWidth > layout.viewportWidth) {
+              throw new Error(`${name} horizontal overflow: ${layout.documentWidth}px document in ${layout.viewportWidth}px viewport`);
+            }
+            const brokenImages = layout.images.filter(img => !img.loaded);
+            if (brokenImages.length) throw new Error(`${name} images failed to load: ${JSON.stringify(brokenImages)}`);
             await page.screenshot({ path: `portfolio-${name}.png`, fullPage: true });
             if (pageErrors.length) throw new Error(`${name} page errors: ${pageErrors.join('; ')}`);
             await page.close();
