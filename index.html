@@ -81,7 +81,7 @@ body {
     text-rendering: optimizeLegibility;
 }
 a { color: inherit; }
-a:focus-visible { outline: 2px solid var(--color-red-text); outline-offset: 4px; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--color-red-text); outline-offset: 4px; }
 .site-nav a:focus-visible { outline-offset: 5px; }
 section[id], .hero, #contact { scroll-margin-top: 5.5rem; }
 main { display: block; min-width: 0; }
@@ -123,7 +123,7 @@ main { display: block; min-width: 0; }
 }
 .professional-skills {
     grid-column: 1 / -1; max-width: 62ch;
-    margin: 1.5rem 0 0; color: #888888;
+    margin: 1.5rem 0 0; color: #767676;
     font-size: clamp(.78rem, .95vw, .9rem); line-height: 1.6;
     font-weight: 400; letter-spacing: .005em;
     text-align: left;
@@ -684,7 +684,7 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
  <div class="selected-work-list">
   <article class="selected-work-entry" id="case-sports-hub"><div class="selected-work-meta"><span>01</span><span>BETTER COLLECTIVE</span><a href="#experience-better-collective">Related experience ↗</a></div><section class="ai-hub-case" aria-label="Selected Product Case: AI-powered Sports Hub">
                     <p class="case-kicker">SELECTED PRODUCT CASE · BETTER COLLECTIVE</p>
-                    <h2 class="case-title">Hub Esportivo: escalar e personalizar conteúdo com IA</h2>
+                    <h3 class="case-title">Hub Esportivo: escalar e personalizar conteúdo com IA</h4>
                     <p class="case-deck">Uma estratégia para conectar conteúdo esportivo local e internacional, ampliar a distribuição com IA e construir uma experiência personalizada para torcedores na América Latina.</p>
                     <div class="case-flow" aria-label="Product strategy">
                         <div class="case-flow-step"><strong>01 · Scale</strong><span>IA para traduzir e distribuir conteúdo internacional em escala.</span></div>
@@ -705,17 +705,17 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                     <div class="case-copy">
                         <div class="case-copy-column" lang="pt-BR">
                             <p class="case-language">PT-BR</p>
-                            <h3>Contexto e oportunidade</h3>
+                            <h4>Contexto e oportunidade</h4>
                             <p>A Better Collective reunia 25 marcas esportivas independentes na América Latina, com conhecimento editorial e presença local em diferentes mercados.</p>
                             <p>Ao mesmo tempo, mais de 2 milhões de artigos produzidos em outros mercados não geravam retorno relevante na região. Havia uma oportunidade de conectar esse conteúdo ao público latino-americano, ampliar sua distribuição e fortalecer o ecossistema de marcas locais.</p>
                             <p>A proposta também buscava aumentar a visibilidade dessas marcas e oferecer uma cobertura esportiva mais variada e aprofundada, apoiada por equipes especializadas, com acesso a atletas, técnicos, clubes e patrocinadores locais.</p>
-                            <h3>Visão de produto</h3>
+                            <h4>Visão de produto</h4>
                             <p>Criar um hub esportivo personalizado, capaz de reunir conteúdos locais e internacionais em uma experiência organizada pelos interesses de cada usuário.</p>
                             <p>A experiência combinaria preferências declaradas, comportamento de navegação e curadoria editorial para conectar torcedores a esportes, competições, times e diferentes perspectivas sobre o universo esportivo.</p>
-                            <h3>Estratégia: Scale + Differentiation</h3>
+                            <h4>Estratégia: Scale + Differentiation</h4>
                             <p><strong>Scale — Escala com IA.</strong> Reaproveitar a capacidade de tradução por IA para distribuir conteúdo internacional em diferentes idiomas e mercados da América Latina, ampliando o catálogo disponível e o potencial de alcance.</p>
                             <p><strong>Differentiation — Diferenciação editorial.</strong> Fortalecer as marcas locais, sua especialização editorial e a profundidade da cobertura esportiva. O objetivo era construir a percepção de um ecossistema com mais variedade, conhecimento e relevância local.</p>
-                            <h3>Principais decisões de produto</h3>
+                            <h4>Principais decisões de produto</h4>
                             <ul>
                                 <li><strong>Personalização:</strong> permitir que usuários selecionassem esportes, times, competições e atletas de interesse.</li>
                                 <li><strong>Descoberta:</strong> combinar preferências declaradas, comportamento e curadoria editorial para organizar o feed.</li>
@@ -725,11 +725,11 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                                 <li><strong>Distribuição e SEO:</strong> estruturar a publicação e a conexão entre os conteúdos locais e internacionais considerando os impactos sobre descoberta orgânica e presença das marcas.</li>
                                 <li><strong>Monetização:</strong> ampliar o inventário de conteúdo e as oportunidades comerciais, incluindo publicidade e ofertas afiliadas.</li>
                             </ul>
-                            <h3>Tecnologia e viabilidade com IA</h3>
+                            <h4>Tecnologia e viabilidade com IA</h4>
                             <p>Um dos desafios era desenvolver uma solução robusta e escalável para traduzir grandes volumes de conteúdo, considerando diferentes idiomas, origens e destinos.</p>
                             <p>A capacidade de tradução por IA já estava em operação em outras frentes. Trabalhei com a liderança de Engenharia de IA para discutir a viabilidade de reaproveitar essa capacidade e conectá-la à experiência proposta para o hub.</p>
                             <p>A especificação técnica completa não foi aprofundada nessa etapa. A decisão foi priorizar um teste mais simples e econômico antes de assumir o investimento de desenvolvimento de uma plataforma mais complexa.</p>
-                            <h3>Validação Lean</h3>
+                            <h4>Validação Lean</h4>
                             <p>A abordagem priorizou aprendizado e aquisição de dados antes de um investimento maior em tecnologia. A primeira entrega concentrou-se em três componentes:</p>
                             <ol>
                                 <li><strong>Landing page:</strong> experiência para apresentar a proposta e captar usuários.</li>
@@ -741,7 +741,7 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                                 <img src="media/torcidometro-poc.jpg" width="1500" height="976" alt="Landing page e formulário da POC Torcidômetro, com seleção de time e campos de cadastro" loading="lazy">
                                 <figcaption>POC Torcidômetro: uma landing page e um formulário simples para testar a proposta.</figcaption>
                             </figure>
-                            <h3>Indicadores de sucesso</h3>
+                            <h4>Indicadores de sucesso</h4>
                             <p><strong>Aquisição e dados</strong></p>
                             <ul>
                                 <li>Número de usuários cadastrados.</li>
@@ -758,11 +758,11 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                                 <li>Aumento do inventário disponível para o time comercial.</li>
                                 <li>Aumento do volume de impressões publicitárias entregues.</li>
                             </ul>
-                            <h3>Minha atuação</h3>
+                            <h4>Minha atuação</h4>
                             <p>Concebi e estruturei a visão do produto, transformando a oportunidade de negócio em uma proposta de experiência e estratégia para a América Latina.</p>
                             <p>Trabalhei com dois Product Designers na construção do conceito e do protótipo. Também conduzi as discussões de viabilidade com a liderança técnica de IA, conectando a oportunidade de produto às capacidades tecnológicas existentes.</p>
                             <p>Apresentei a proposta à liderança sênior da região e ajudei a definir uma abordagem de validação progressiva: começar pela aquisição e análise de dados, reduzir o custo inicial de experimentação e gerar evidências antes de avançar para o desenvolvimento completo.</p>
-                            <h3>Aprendizado e desdobramento</h3>
+                            <h4>Aprendizado e desdobramento</h4>
                             <p>O trabalho também contribuiu para amadurecer a hipótese de um programa de Loyalty conectado ao ecossistema esportivo.</p>
                             <p>Essa frente foi validada separadamente, por meio de uma POC baseada em grupos de WhatsApp, que alcançou 60 mil usuários em três meses.</p>
                             <p class="case-note">Esse resultado pertence à iniciativa de Loyalty, não ao Hub Esportivo.</p>
@@ -770,17 +770,17 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                         </div>
                         <div class="case-copy-column" lang="en">
                             <p class="case-language">ENGLISH</p>
-                            <h3>Context and opportunity</h3>
+                            <h4>Context and opportunity</h4>
                             <p>Better Collective brought together 25 independent sports media brands across Latin America, combining local market presence with specialized editorial knowledge.</p>
                             <p>At the same time, more than 2 million articles produced in other markets were not generating meaningful returns in the region. This represented an opportunity to connect that content with Latin American audiences, expand its distribution, and strengthen the ecosystem of local brands.</p>
                             <p>The initiative also aimed to increase the visibility of local brands and provide broader, deeper sports coverage, supported by specialized editorial teams with access to athletes, coaches, clubs, and local sponsors.</p>
-                            <h3>Product vision</h3>
+                            <h4>Product vision</h4>
                             <p>Create a personalized sports hub that brings together local and international content in an experience organized around each user's interests.</p>
                             <p>The experience would combine declared preferences, browsing behavior, and editorial curation to connect fans with sports, competitions, teams, and different perspectives across the sports ecosystem.</p>
-                            <h3>Strategy: Scale + Differentiation</h3>
+                            <h4>Strategy: Scale + Differentiation</h4>
                             <p><strong>Scale — AI-powered distribution.</strong> Leverage existing AI translation capabilities to distribute international content across different languages and Latin American markets, expanding the available content catalog and its potential reach.</p>
                             <p><strong>Differentiation — Editorial depth.</strong> Strengthen local brands, their editorial specialization, and the depth of sports coverage. The goal was to build the perception of a broader ecosystem offering greater variety, expertise, and local relevance.</p>
-                            <h3>Key product decisions</h3>
+                            <h4>Key product decisions</h4>
                             <ul>
                                 <li><strong>Personalization:</strong> allow users to select their preferred sports, teams, competitions, and athletes.</li>
                                 <li><strong>Discovery:</strong> combine declared preferences, behavioral signals, and editorial curation to organize the feed.</li>
@@ -790,11 +790,11 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                                 <li><strong>Distribution and SEO:</strong> structure content publishing and connections between local and international content, considering their impact on organic discovery and brand presence.</li>
                                 <li><strong>Monetization:</strong> expand the content inventory and commercial opportunities, including advertising and affiliate offers.</li>
                             </ul>
-                            <h3>Technology and AI feasibility</h3>
+                            <h4>Technology and AI feasibility</h4>
                             <p>One of the main challenges was developing a robust, scalable solution to translate large volumes of content across multiple languages, origins, and destinations.</p>
                             <p>AI translation capabilities were already operating in other initiatives. I worked with AI Engineering leadership to explore the feasibility of reusing those capabilities and connecting them to the proposed hub experience.</p>
                             <p>The full technical specification was not developed at this stage. The decision was to prioritize a simpler, lower-cost test before committing to the investment required for a more complex platform.</p>
-                            <h3>Lean validation</h3>
+                            <h4>Lean validation</h4>
                             <p>The approach prioritized learning and data acquisition before making a larger technology investment. The initial delivery focused on three components:</p>
                             <ol>
                                 <li><strong>Landing page:</strong> an experience to introduce the proposition and acquire users.</li>
@@ -802,7 +802,7 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                                 <li><strong>Dashboard:</strong> a way to monitor data and analyze indicators to identify opportunities and inform decisions.</li>
                             </ol>
                             <p>The Torcidômetro POC registration experience illustrates this approach: a landing page capturing team preferences, personal details, contact information, and answers about betting habits and profile. After registration, users received a confirmation and an invitation to continue the relationship through WhatsApp.</p>
-                            <h3>Success metrics</h3>
+                            <h4>Success metrics</h4>
                             <p><strong>Acquisition and data</strong></p>
                             <ul>
                                 <li>Number of registered users.</li>
@@ -819,11 +819,11 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                                 <li>Increase in inventory available to the commercial team.</li>
                                 <li>Increase in the volume of advertising impressions delivered.</li>
                             </ul>
-                            <h3>My contribution</h3>
+                            <h4>My contribution</h4>
                             <p>I conceived and structured the product vision, translating the business opportunity into a product experience and strategy for Latin America.</p>
                             <p>I worked with two Product Designers to develop the concept and prototype. I also led feasibility discussions with AI technical leadership, connecting the product opportunity with existing technological capabilities.</p>
                             <p>I presented the proposal to regional senior leadership and helped define a progressive validation approach: start with acquisition and data analysis, reduce initial experimentation costs, and generate evidence before moving forward with full-scale development.</p>
-                            <h3>Learning and next steps</h3>
+                            <h4>Learning and next steps</h4>
                             <p>The work also helped shape the hypothesis for a Loyalty program connected to the sports ecosystem.</p>
                             <p>That initiative was validated separately through a WhatsApp group-based POC, which reached 60,000 users in three months.</p>
                             <p class="case-note">This result belongs to the Loyalty initiative, not the Sports Hub.</p>
@@ -839,24 +839,25 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
                 </section></article>
   <article class="selected-work-entry" id="case-big-game"><div class="selected-work-meta"><span>02</span><span>GRUPO GLOBO</span><a href="#experience-globo-gshow">Related experience ↗</a></div><section class="big-game-case" aria-label="Selected Product Case: Big Game BBB">
     <p class="case-kicker">SELECTED PRODUCT CASE · BIG GAME BBB</p>
+    <h3 class="case-title">Big Game BBB: uma experiência de fantasy game para ampliar o engajamento</h3>
     <p class="case-deck">Uma experiência de fantasy game que transformou o maior reality show do Brasil em um jogo de engajamento.</p>
     <div class="case-copy">
         <div class="case-copy-column" lang="pt-BR">
             <p class="case-language">PT-BR</p>
-            <h3>O desafio</h3>
+            <h4>O desafio</h4>
             <p>O Big Game BBB nasceu como uma prova de conceito para aumentar o engajamento dos fãs nos períodos de menor relevância do programa na TV e estimular o consumo de conteúdo no GShow.</p>
             <p>A hipótese se apoiava no comportamento dos jogadores de fantasy games: dados do Cartola indicavam que eles consumiam de duas a três vezes mais conteúdo do que os demais usuários.</p>
-            <h3>Minha atuação</h3>
+            <h4>Minha atuação</h4>
             <p>Acompanhei o produto de ponta a ponta, da concepção à evolução durante a temporada. Atuei como consultor e coordenador, orquestrando equipes multidisciplinares e estimulando a autonomia de designers, desenvolvedores, cientistas de dados e outros profissionais envolvidos.</p>
             <p>Minha experiência em desenvolvimento de software, métricas de consumo e engajamento, comportamento do usuário e fantasy games ajudou a orientar decisões e conectar as diferentes frentes de trabalho.</p>
             <p>Também liderei o alinhamento com equipes de plataforma, aproveitando soluções existentes, como login, enquetes e votação, para acelerar a entrega. A gestão de stakeholders foi fundamental para alinhar expectativas, prioridades e entregas a cada release.</p>
         </div>
         <div class="case-copy-column" lang="en">
             <p class="case-language">EN</p>
-            <h3>The challenge</h3>
+            <h4>The challenge</h4>
             <p>Big Game BBB started as a proof of concept to increase fan engagement during periods when the show had lower relevance on TV and encourage greater content consumption on GShow.</p>
             <p>The hypothesis was based on fantasy game user behavior: Cartola data indicated that fantasy players consumed two to three times more content than other users.</p>
-            <h3>My role</h3>
+            <h4>My role</h4>
             <p>I followed the product end to end, from its conception to its evolution throughout the season. Acting as a product advisor and coordinator, I orchestrated cross-functional teams while encouraging designers, developers, data scientists and other contributors to work autonomously.</p>
             <p>My experience in software development, consumption and engagement metrics, user behavior and fantasy games helped guide decisions and connect different workstreams.</p>
             <p>I also coordinated alignment with platform teams, leveraging existing capabilities such as login, polls and voting to accelerate delivery. Stakeholder management was essential to align expectations, priorities and deliverables across releases.</p>
@@ -871,7 +872,7 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
     </div>
     <div class="case-media">
         <div class="case-media-note">
-            <h3>Videocase · BBB22</h3>
+            <h4>Videocase · BBB22</h4>
             <p>Assista à experiência do produto em funcionamento. O vídeo abre em uma janela ampliada, sem sair da página.</p>
         </div>
         <button class="case-video-trigger" type="button" data-open-bbb-video aria-haspopup="dialog" aria-controls="bbb-video-dialog">
