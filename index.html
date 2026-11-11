@@ -400,6 +400,51 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
 .advertiser-footer p { margin:.35rem 0; color:var(--color-muted); font-size:.88rem; line-height:1.6; }
 .advertiser-footer a { text-decoration:underline; text-decoration-color:var(--color-red); text-underline-offset:3px; }
 .advertiser-footer .footer-legal { margin-top:1rem; padding-top:1rem; border-top:1px solid var(--color-gray); font-size:.75rem; }
+
+/* Phase 2 — editorial rhythm and responsive refinement */
+.intro-column { max-width: 68ch; }
+.intro-column p { text-wrap: pretty; }
+.experience-item { align-items: start; }
+.experience-heading { position: relative; }
+.experience-heading .job-title,
+.experience-meta { line-height: 1.65; }
+.experience-description { max-width: 76ch; }
+.experience-description p,
+.experience-description li { text-wrap: pretty; }
+.experience-company-heading { border-bottom: 1px solid var(--color-gray); }
+.experience-company-heading h3 { letter-spacing: -.06em; }
+.selected-work-entry { scroll-margin-top: 6rem; }
+.selected-work-meta { padding-bottom: .85rem; border-bottom: 1px solid var(--color-gray); }
+.selected-work-entry .case-deck { text-wrap: pretty; }
+.case-copy-column { max-width: 72ch; }
+.case-copy p,
+.case-copy li { text-wrap: pretty; }
+.case-metric { padding-right: .5rem; }
+.case-media-note { align-self: center; }
+.year-section { align-items: start; }
+.year-section li { max-width: 78ch; text-wrap: pretty; }
+.year-section li + li { border-top: 1px solid rgba(0,0,0,.055); padding-top: .65rem; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .experience-heading { grid-column: 1 / span 5; }
+  .experience-description { grid-column: 6 / -1; }
+  .selected-work-entry .case-title { font-size: clamp(2.6rem, 5.4vw, 4.8rem); }
+  .case-metrics { gap: .75rem; }
+}
+@media (max-width: 760px) {
+  .intro-column { max-width: none; }
+  .experience-description { max-width: none; }
+  .experience-company-heading { padding-bottom: .85rem; }
+  .selected-work-meta { align-items: baseline; }
+  .selected-work-entry .case-title { font-size: clamp(2.35rem, 10vw, 4rem); line-height: .98; }
+  .case-copy-column { max-width: none; }
+  .year-section li + li { margin-top: .2rem; }
+}
+@media (max-width: 420px) {
+  .selected-work-meta { font-size: .62rem; }
+  .case-metrics { column-gap: .75rem; }
+  .case-metric-label { line-height: 1.45; }
+  .year-section { padding: 1.25rem 0 1.4rem; }
+}
 </style>
 </head>
 
