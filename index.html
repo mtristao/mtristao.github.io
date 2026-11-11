@@ -1105,7 +1105,7 @@ section{padding:clamp(4.5rem,8vw,8rem) 0}section h2{max-width:12ch;font-size:cla
     const closeDialog = () => { video.pause(); video.currentTime = 0; dialog.close(); };
     closeButton.addEventListener('click', closeDialog);
     dialog.addEventListener('click', event => { if (event.target === dialog) closeDialog(); });
-    dialog.addEventListener('close', () => video.pause());
+    dialog.addEventListener('close', () => { video.pause(); openButton.focus(); });
     document.addEventListener('keydown', event => { if (event.key === 'Escape' && dialog.open) closeDialog(); });
 })();
 </script>
